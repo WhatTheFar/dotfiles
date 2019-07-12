@@ -1,0 +1,6 @@
+export PATH="~/Library/Android/sdk/platform-tools/:$PATH"
+export PATH="~/development/flutter/bin:$PATH"
+
+# GO
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
