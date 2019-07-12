@@ -185,3 +185,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+	name = WhatTheFar
+	email = jakpat.m@gmail.com
