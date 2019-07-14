@@ -3,7 +3,7 @@
 RESET=`tput sgr0`
 BLUE=`tput setaf 30`
 
-dir="config"
+dir="dotfiles"
 dotfiles=`find . -type f -name "*" -path "./${dir}/*" | sed "s/^\.\/${dir}\///"`
 
 for file in $dotfiles
