@@ -4,8 +4,9 @@ RESET=`tput sgr0`
 GREEN=`tput setaf 32`
 BLUE=`tput setaf 34`
 
-scripts=`find . -type f -name "*" -path "./scripts/*" | sed 's/^\.\/scripts\///'`
-# scripts=`find . -type f -name "*" -path "./scripts/*"`
+dir="scripts"
+# scripts=`find . -type f -name "*.sh" -path "./${dir}/*" | sed "s/^\.\/${dir}\///" | grep "^\d" | sort -n`
+scripts=`ls ${dir}/*.sh | sed "s/^${dir}\///" | grep "^\d"`
 
 echo "> Initializing..."
 echo
@@ -15,7 +16,7 @@ do
     echo -e "$BLUE--- Executing $script ---$RESET"
     echo
 
-    source "scripts/$script"
+    $dir/$script
 
     echo
     echo -e "$GREEN--- Finished executing $script ---$RESET"
