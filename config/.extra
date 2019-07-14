@@ -4,6 +4,11 @@ alias dk="docker"
 # docker-compose
 alias dcp="docker-compose"
 
+# gitignore.io API
+function gi() { 
+    curl -sL https://www.gitignore.io/api/\$@ ;
+}
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="WhatTheFar"
