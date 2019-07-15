@@ -82,6 +82,7 @@ POWERLEVEL9K_CUSTOM_APPLE_BACKGROUND="white"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
