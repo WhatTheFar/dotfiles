@@ -31,8 +31,16 @@ cask "jetbrains-toolbox"
 # VirtualBox
 cask "virtualbox"
 
+# Kubernetes
+cask "minikube"
+brew "kubernetes-cli"
+
 # Google Cloud SDK
 cask "google-cloud-sdk"
+
+# ------------------
+#       Fonts
+# ------------------
 
 # FuraCode, FuraMono & Hack
 cask "font-firacode-nerd-font"
@@ -43,6 +51,10 @@ cask "font-hack-nerd-font"
 #
 #      Formulae
 #
+# ------------------
+
+# ------------------
+#        Core
 # ------------------
 
 # Shells
@@ -56,6 +68,10 @@ brew "ed"
 brew "vim"
 brew "neovim"
 
+# ------------------
+#        Git
+# ------------------
+
 # Git
 brew "git"
 brew "git-extras"
@@ -67,21 +83,29 @@ brew "gist"
 # Hub (Git Replacement for GitHub)
 brew "hub"
 
-# Yarn
+# ------------------
+#    Programming
+# ------------------
+
+# NodeJS, Yarn
+brew "node", link: false
 brew "yarn", ignore_dependencies: true
 
-# NodeJS
-brew "node", link: false
+# Go
+brew "go"
+
+# Protobuf
+brew "protobuf"
 
 # ngrok
 cask "ngrok"
 
-# Install `wget` with IRI support.
-brew "wget", args: ["with-iri"]
-
 # ------------------
 #     Utilities
 # ------------------
+
+# Install `wget` with IRI support.
+brew "wget", args: ["with-iri"]
 
 # TLDR - Shell Explainer
 brew "tldr"
