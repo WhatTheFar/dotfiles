@@ -13,6 +13,10 @@ tap "homebrew/services"
 #
 # ------------------
 
+# ------------------
+#    Productivity
+# ------------------
+
 # Terminal
 cask "iterm2"
 
@@ -22,11 +26,21 @@ cask "alfred"
 # Google Chrome
 cask "google-chrome"
 
+# ------------------
+#    Development
+# ------------------
+
 # Visual Studio Code
 cask "visual-studio-code"
 
 # JetBrains Toolbox
 cask "jetbrains-toolbox"
+
+# Docker
+cask "docker"
+
+# Fork
+cask "fork"
 
 # VirtualBox
 cask "virtualbox"
@@ -37,6 +51,18 @@ brew "kubernetes-cli"
 
 # Google Cloud SDK
 cask "google-cloud-sdk"
+
+# ------------------
+#    Daily Usage
+# ------------------
+
+cask "slack"
+cask "spotify"
+cask "flux"
+cask "cleanmymac"
+cask "the-unarchiver"
+cask "kindle"
+cask "send-to-kindle"
 
 # ------------------
 #       Fonts
@@ -106,6 +132,9 @@ cask "ngrok"
 
 # Install `wget` with IRI support.
 brew "wget", args: ["with-iri"]
+
+# Mac App Store command line interface
+brew "mas"
 
 # TLDR - Shell Explainer
 brew "tldr"
