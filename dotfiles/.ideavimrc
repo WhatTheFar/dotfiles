@@ -1,0 +1,23 @@
+nmap <S-l> gt
+nmap <S-h> gT
+nmap <S-w>L :action VimWindowRight<CR>
+nmap <S-w>H :action VimWindowLeft<CR>
+nmap <S-w>J :action VimWindowDown<CR>
+nmap <S-w>K :action VimWindowUp<CR>
+nmap <M-j> 5j5<C-e>
+nmap <M-k> 5k5<C-y>
+"for window <C-r>" in insert mode, for mac cmd+v
+imap <C-r>" <esc>:action EditorPaste<CR>a
+
+nmap 'p :action ActivatePreviewToolWindow<CR>
+nmap 'f :action ActivateProjectToolWindow<CR>
+nmap 'ter :action ActivateTerminalToolWindow<CR>
+nmap 'a :action ActivateAndroidMonitorToolWindow<CR>
+nmap 'to :action ActivateTODOToolWindow<CR>
+nmap '<Esc> :action HideActiveWindow<CR>
+nmap m ]m
+nmap M [m
+
+set surround
+set clipboard+=unnamed
+set multiple-cursors
