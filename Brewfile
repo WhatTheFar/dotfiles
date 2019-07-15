@@ -65,7 +65,7 @@ brew "bfg"
 brew "gist"
 
 # Hub (Git Replacement for GitHub)
-brew "hub
+brew "hub"
 
 # Yarn
 brew "yarn", ignore_dependencies: true
@@ -77,7 +77,7 @@ brew "node", link: false
 cask "ngrok"
 
 # Install `wget` with IRI support.
-brew wget --with-iri
+brew "wget", args: ["with-iri"]
 
 # ------------------
 #     Utilities
