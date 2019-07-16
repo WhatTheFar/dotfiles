@@ -85,6 +85,16 @@ plugins=(
   zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
+
+  docker
+  docker-compose
+  kubectl
+  minikube
+
+  npm
+  yarn
+
+  golang
 )
 
 source $ZSH/oh-my-zsh.sh
