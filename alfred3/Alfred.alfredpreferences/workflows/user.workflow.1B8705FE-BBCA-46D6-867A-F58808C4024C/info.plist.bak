@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>org.leolabs.alfred.gitmoji</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>9B7FE8AC-6582-4825-917E-92D0E0291CC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B3FCC411-A44D-485C-BBFB-1E5734C43FC8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B491F830-2110-49B7-8499-164C3002C042</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Only copy to clipboard</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B3FCC411-A44D-485C-BBFB-1E5734C43FC8</key>
+		<array/>
+		<key>B491F830-2110-49B7-8499-164C3002C042</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Leo Bernard</string>
+	<key>description</key>
+	<string>Search for gitmoji and copy them to the clipboard easily</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Gitmoji</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>gm</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>chmod +x jq &amp;&amp; cat gitmojis.json | ./jq --raw-output '{items: [.gitmojis | .[] | {emoji: .emoji, code: .code, title: (.emoji + " " + .code), subtitle: .description, match: (.description + " " + .name), arg: .code, text: {copy: .code, largetype: .code}}]}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>gitmoji.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>GitMoji</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>9B7FE8AC-6582-4825-917E-92D0E0291CC1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query} </string>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B3FCC411-A44D-485C-BBFB-1E5734C43FC8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B491F830-2110-49B7-8499-164C3002C042</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This workflow enables you to access the gitmoji database and copy relevant emojis to your clipboard.
+
+The database can be found here: https://gitmoji.carloscuesta.me/
+
+Workflow by @leolabs_org</string>
+	<key>uidata</key>
+	<dict>
+		<key>9B7FE8AC-6582-4825-917E-92D0E0291CC1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>20</integer>
+		</dict>
+		<key>B3FCC411-A44D-485C-BBFB-1E5734C43FC8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>20</integer>
+		</dict>
+		<key>B491F830-2110-49B7-8499-164C3002C042</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.1</string>
+	<key>webaddress</key>
+	<string>https://leolabs.org</string>
+</dict>
+</plist>

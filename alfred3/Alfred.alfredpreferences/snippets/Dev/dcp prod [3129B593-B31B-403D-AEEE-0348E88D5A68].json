@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "docker-compose -f docker-compose.yml -f docker-compose.prod.yml ",
+    "uid" : "3129B593-B31B-403D-AEEE-0348E88D5A68",
+    "name" : "dcp prod",
+    "keyword" : ""
+  }
+}

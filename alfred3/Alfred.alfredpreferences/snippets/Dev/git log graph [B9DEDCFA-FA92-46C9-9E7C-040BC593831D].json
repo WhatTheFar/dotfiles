@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "git log --all --decorate --oneline --graph\n",
+    "uid" : "B9DEDCFA-FA92-46C9-9E7C-040BC593831D",
+    "name" : "git log graph",
+    "keyword" : "gitloggraph"
+  }
+}
