@@ -14,6 +14,21 @@ Go to `System Preferences -> Keyboard -> Modifier Keys...` and set Caps Lock Key
 
 ![](img/keyboard-keys.png)
 
+### Accessibility
+
+#### Zoom
+
+Go to `System Preferences -> Accessibility -> Zoom`
+
+- Use scroll gesture with modifier keys to zoom -> `^ Control`
+- Zoom follows the keyboard focus
+
+#### Three finger dragging
+
+Go to `System Preferences -> Accessibility -> Mouse & Trackpad -> Trackpad Options...`
+
+- Enable dragging -> `three finger drag`
+
 ### Alfred
 
 In advanced setting page, set preferences folder to `alfred3`.
