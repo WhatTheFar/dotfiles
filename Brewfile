@@ -36,14 +36,14 @@ cask "visual-studio-code"
 # JetBrains Toolbox
 cask "jetbrains-toolbox"
 
+# VirtualBox
+cask "virtualbox"
+
 # Docker
 cask "docker"
 
 # Fork
 cask "fork"
-
-# VirtualBox
-cask "virtualbox"
 
 # Kubernetes
 cask "minikube"
@@ -58,6 +58,7 @@ cask "google-cloud-sdk"
 
 cask "slack"
 cask "spotify"
+cask "iina"
 cask "flux"
 cask "cleanmymac"
 cask "the-unarchiver"
@@ -103,7 +104,7 @@ brew "git"
 brew "git-extras"
 brew "git-flow"
 brew "git-lfs"
-brew "bfg"
+# brew "bfg"
 brew "gist"
 
 # Hub (Git Replacement for GitHub)
@@ -130,14 +131,14 @@ cask "ngrok"
 #     Utilities
 # ------------------
 
-# Install `wget` with IRI support.
-brew "wget", args: ["with-iri"]
-
 # Mac App Store command line interface
 brew "mas"
 
 # TLDR - Shell Explainer
 brew "tldr"
+
+# BAT - A cat(1) clone with wings.
+brew "bat"
 
 # FD - User-friendly `find`
 brew "fd"
