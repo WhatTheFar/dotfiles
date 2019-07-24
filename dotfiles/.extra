@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+# My Directory Shortcuts
+alias wtf="cd ~/Projects/what_the_far"
+
 # docker
 alias dk="docker"
 
@@ -6,7 +11,7 @@ alias dcp="docker-compose"
 
 # gitignore.io API
 function gi() { 
-    curl -sL https://www.gitignore.io/api/\$@ ;
+    curl -sL "https://www.gitignore.io/api/$@" ;
 }
 
 # Git credentials
