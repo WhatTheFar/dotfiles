@@ -41,6 +41,8 @@ cask "virtualbox"
 
 # Docker
 cask "docker"
+tap "wagoodman/dive"
+brew "dive"
 
 # Fork
 cask "fork"
@@ -48,6 +50,7 @@ cask "fork"
 # Kubernetes
 cask "minikube"
 brew "kubernetes-cli"
+brew "kops"
 
 # Google Cloud SDK
 cask "google-cloud-sdk"
@@ -95,6 +98,8 @@ brew "ed"
 brew "vim"
 brew "neovim"
 
+brew wget
+
 # ------------------
 #        Git
 # ------------------
@@ -130,6 +135,9 @@ cask "ngrok"
 # ------------------
 #     Utilities
 # ------------------
+
+# Thefuck - Magnificent app which corrects your previous console command.
+brew thefuck
 
 # Mac App Store command line interface
 brew "mas"
