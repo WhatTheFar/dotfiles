@@ -43,6 +43,8 @@ cask "virtualbox"
 cask "docker"
 tap "wagoodman/dive"
 brew "dive"
+tap "jesseduffield/lazydocker"
+brew "lazydocker"
 
 # Fork
 cask "fork"
