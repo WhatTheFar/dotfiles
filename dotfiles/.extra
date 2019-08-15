@@ -14,6 +14,14 @@ function gi() {
     curl -sL "https://www.gitignore.io/api/$@" ;
 }
 
+# Fetch all git recursively
+function gitfetchall() {
+    find . -type d -name .git \
+        -exec echo "$(tput setaf 34)--- Fetching {} ---$(tput sgr0)" \; \
+        -execdir git fetch --all \; \
+        -exec echo \;
+}
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="WhatTheFar"
