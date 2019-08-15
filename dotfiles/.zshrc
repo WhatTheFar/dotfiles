@@ -84,15 +84,21 @@ POWERLEVEL9K_CUSTOM_APPLE_BACKGROUND="white"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
+
+  git
+
+  dotenv
+  fd
+  osx
 
   docker
   docker-compose
   kubectl
   minikube
+  kops
 
   npm
   yarn
@@ -134,3 +140,6 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
+
+# Set the `fuck` alias to `thefuck` tool
+eval "$(thefuck --alias)"
