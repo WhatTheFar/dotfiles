@@ -3,6 +3,9 @@
 # My Directory Shortcuts
 alias wtf="cd ~/Projects/what_the_far"
 
+# Please
+alias please='sudo $(fc -ln -1)'
+
 # docker
 alias dk="docker"
 
