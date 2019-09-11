@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "docker rmi -f $(docker images -f \"dangling=true\" -q)",
+    "uid" : "F665C209-5BF1-42C4-8163-F0F4E71DADAC",
+    "name" : "docker rm dangling images",
+    "keyword" : ""
+  }
+}
