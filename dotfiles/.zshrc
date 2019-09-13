@@ -20,8 +20,12 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(pyenv)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# Configure pyenv prompts
+# https://github.com/Powerlevel9k/powerlevel9k#pyenv
+POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
 
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
