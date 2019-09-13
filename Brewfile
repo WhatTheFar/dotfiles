@@ -158,3 +158,6 @@ brew "fzf"
 
 # FX - Command-line JSON processing tool
 brew "fx"
+
+# tree - Show the contents of the current directory as a tree.
+brew "tree"
