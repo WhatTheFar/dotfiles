@@ -20,7 +20,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(pyenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda pyenv)
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Configure pyenv prompts
