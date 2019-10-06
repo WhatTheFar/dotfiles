@@ -11,6 +11,7 @@ alias dk="docker"
 
 # docker-compose
 alias dcp="docker-compose"
+alias dcpp="docker-compose -f docker-compose.yml -f docker-compose.prod.yml"
 
 # gitignore.io API
 function gi() { 
