@@ -11,7 +11,7 @@ export PATH="$GOPATH/bin:$PATH"
 # setting for pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:${PYENV_ROOT}/shims:${PATH}
+    export PATH=${PYENV_ROOT}/bin:${PATH}
     eval "$(pyenv init -)"
 fi
 # setting for pyenv-virtualenv
