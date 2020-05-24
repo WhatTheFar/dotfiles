@@ -18,7 +18,7 @@ nmap '<Esc> :action HideActiveWindow<CR>
 nmap m ]m
 nmap M [m
 
-let mapleader="\"
+let mapleader=" "
 set easymotion
 set surround
 set clipboard+=unnamed
