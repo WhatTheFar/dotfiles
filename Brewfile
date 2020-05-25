@@ -158,6 +158,10 @@ brew "fd"
 # FZF - command-line fuzzy finder
 brew "fzf"
 
+# Search tools
+brew "the_silver_searcher"
+brew "ripgrep"
+
 # FX - Command-line JSON processing tool
 brew "fx"
 
