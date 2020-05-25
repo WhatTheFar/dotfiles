@@ -10,5 +10,6 @@ for file in $dotfiles
 do
     echo -e "$BLUE--- Linking $file ---$RESET"
 
+    mkdir -p "$HOME/$(dirname $file)" 
     ln -sf "$(pwd)/$dir/$file" "$HOME/$file"
 done
