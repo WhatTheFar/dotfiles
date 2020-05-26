@@ -2,6 +2,10 @@ source $HOME/.config/nvim/init.vim
     
 let mapleader=" "
 
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
