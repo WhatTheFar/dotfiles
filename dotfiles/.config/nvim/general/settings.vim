@@ -37,7 +37,8 @@ if !exists('g:vscode')
     " delays and poor user experience.
     set updatetime=300                      " Faster completion
     set timeoutlen=300                      " By default timeoutlen is 1000 ms
-    set clipboard=unnamedplus               " Copy paste between vim and everything else
+    " set clipboard=unnamedplus               " Copy paste between vim and everything else , for  Linux
+    set clipboard=unnamed               " OSX
     set incsearch
     set guifont=Hack\ Nerd\ Font
     " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
