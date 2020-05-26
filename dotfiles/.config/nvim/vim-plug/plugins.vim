@@ -36,8 +36,8 @@ else
     " Plug 'jremmen/vim-ripgrep' " conflict with fzf
 
     " == IntelliSense ==
-    Plug 'ycm-core/YouCompleteMe'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'ycm-core/YouCompleteMe'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " == Status Line ==
     Plug 'vim-airline/vim-airline'

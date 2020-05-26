@@ -102,6 +102,6 @@ else
     endfun
 
     autocmd BufWritePre * :call TrimWhitespace()
-    autocmd FileType typescript :call GoYCM()
-    autocmd FileType cpp,cxx,h,hpp,c :call GoCoc()
+    " autocmd FileType typescript :call GoYCM()
+    " autocmd FileType cpp,cxx,h,hpp,c :call GoCoc()
 endif

@@ -19,9 +19,10 @@ else
     source $HOME/.config/nvim/themes/airline.vim
     source $HOME/.config/nvim/themes/colorschema.vim
 
+    source $HOME/.config/nvim/plug-config/coc.vim
     source $HOME/.config/nvim/plug-config/ctrlp.vim
     source $HOME/.config/nvim/plug-config/easy-motion.vim
     source $HOME/.config/nvim/plug-config/fzf.vim
     source $HOME/.config/nvim/plug-config/quick-scope.vim
-    source $HOME/.config/nvim/plug-config/ycm.vim
+    " source $HOME/.config/nvim/plug-config/ycm.vim
 endif
