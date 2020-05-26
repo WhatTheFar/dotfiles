@@ -23,7 +23,7 @@ if exists('g:vscode')
     Plug 'asvetliakov/vim-easymotion'
 
 else
-    # Syntax Highlighter
+    " == Syntax Highlighter ==
     Plug 'pangloss/vim-javascript'    " JavaScript support
     Plug 'leafgarland/typescript-vim' " TypeScript syntax
     Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
