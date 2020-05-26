@@ -23,6 +23,12 @@ if exists('g:vscode')
     Plug 'asvetliakov/vim-easymotion'
 
 else
+    # Syntax Highlighter
+    Plug 'pangloss/vim-javascript'    " JavaScript support
+    Plug 'leafgarland/typescript-vim' " TypeScript syntax
+    Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+    Plug 'jparise/vim-graphql'        " GraphQL syntax
+
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
     Plug 'easymotion/vim-easymotion'
@@ -51,7 +57,6 @@ else
     Plug 'morhetz/gruvbox'
 
     " == Others ==
-    Plug 'leafgarland/typescript-vim'
     Plug 'vim-utils/vim-man'
     " Plug 'lyuts/vim-rtags'
     
