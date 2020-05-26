@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 export PATH="~/Library/Android/sdk/platform-tools/:$PATH"
 export PATH="~/development/flutter/bin:$PATH"
 
