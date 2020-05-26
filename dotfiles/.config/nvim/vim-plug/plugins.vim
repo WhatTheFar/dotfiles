@@ -36,6 +36,7 @@ else
     Plug 'terryma/vim-multiple-cursors'
 
     " == File Browsing & Search ==
+    Plug 'preservim/nerdtree'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ctrlpvim/ctrlp.vim'

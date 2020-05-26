@@ -23,6 +23,7 @@ else
     source $HOME/.config/nvim/plug-config/ctrlp.vim
     source $HOME/.config/nvim/plug-config/easy-motion.vim
     source $HOME/.config/nvim/plug-config/fzf.vim
+    source $HOME/.config/nvim/plug-config/nerdtree.vim
     source $HOME/.config/nvim/plug-config/quick-scope.vim
     " source $HOME/.config/nvim/plug-config/ycm.vim
 endif
