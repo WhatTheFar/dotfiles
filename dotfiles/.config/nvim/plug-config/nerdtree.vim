@@ -1,4 +1,6 @@
 " == NERDTree ==
+" GitHub : https://github.com/preservim/nerdtree
+" Doc : https://github.com/preservim/nerdtree/blob/master/doc/NERDTree.txt
 
 autocmd StdinReadPre * let s:std_in=1
 
@@ -14,7 +16,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " == Override Default Mappings ==
 
 let g:NERDTreeMapOpenSplit = 's'
-let g:NERDTreeMapOpenVSplit = 'v'
+let g:NERDTreeMapOpenVSplit = 'i'
 
 let g:NERDTreeMapPreviewSplit = 'gs'
-let g:NERDTreeMapPreviewVSplit = 'gv'
+let g:NERDTreeMapPreviewVSplit = 'gi'
