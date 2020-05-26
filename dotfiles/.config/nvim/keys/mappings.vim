@@ -18,7 +18,7 @@ else
     nnoremap <C-p> :Files<CR>
     nnoremap <leader>g :GFiles -oc --exclude-standard<CR>
     " nnoremap <leader>b :Buffers<CR>
-    nnoremap <leader>t :NERDTree<CR>
+    nnoremap <leader>t :NERDTreeFocus<CR>
     nnoremap <leader>u :UndotreeShow<CR>
     nnoremap <leader>pv <C-w>v<bar> :Ex <bar> :vertical resize 30<CR>
     nnoremap <leader>ps :Rg<SPACE>
