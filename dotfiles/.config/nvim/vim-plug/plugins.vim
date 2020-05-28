@@ -60,7 +60,7 @@ else
     " == Others ==
     Plug 'vim-utils/vim-man'
     " Plug 'lyuts/vim-rtags'
-    
+
 endif
 
 call plug#end()
