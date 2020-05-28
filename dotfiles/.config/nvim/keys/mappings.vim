@@ -25,6 +25,11 @@ else
 
     " Source vimrc
     nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+    " Move Line Up
+    vnoremap K :m '<-2<CR>gv=gv
+    " Move Line Down
+    vnoremap J :m '>+1<CR>gv=gv
+
 
     " TAB in general mode will move to text buffer
     nnoremap <silent> <TAB> :bnext<CR>
