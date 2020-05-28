@@ -25,5 +25,6 @@ else
     source $HOME/.config/nvim/plug-config/fzf.vim
     source $HOME/.config/nvim/plug-config/nerdtree.vim
     source $HOME/.config/nvim/plug-config/quick-scope.vim
+    source $HOME/.config/nvim/plug-config/vim-polyglot.vim
     " source $HOME/.config/nvim/plug-config/ycm.vim
 endif
