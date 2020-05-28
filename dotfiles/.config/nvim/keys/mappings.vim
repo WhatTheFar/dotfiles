@@ -20,8 +20,9 @@ else
     " nnoremap <leader>b :Buffers<CR>
     nnoremap <leader>t :NERDTreeFocus<CR>
     nnoremap <leader>u :UndotreeShow<CR>
-    nnoremap <leader>pv <C-w>v<bar> :Ex <bar> :vertical resize 30<CR>
-    nnoremap <leader>ps :Rg<SPACE>
+
+    "nnoremap <leader>pv <C-w>v<bar> :Ex <bar> :vertical resize 30<CR>
+    " nnoremap <leader>ps :Rg<SPACE>
 
     " Source vimrc
     nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
