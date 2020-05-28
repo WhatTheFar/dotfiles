@@ -30,6 +30,9 @@ else
     " Plug 'jparise/vim-graphql'        " GraphQL syntax
     " Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 
+    " == Formatter ==
+    Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
+
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
     Plug 'easymotion/vim-easymotion'
