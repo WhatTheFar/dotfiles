@@ -23,6 +23,8 @@ else
     nnoremap <leader>pv <C-w>v<bar> :Ex <bar> :vertical resize 30<CR>
     nnoremap <leader>ps :Rg<SPACE>
 
+    " Source vimrc
+    nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 
     " TAB in general mode will move to text buffer
     nnoremap <silent> <TAB> :bnext<CR>
