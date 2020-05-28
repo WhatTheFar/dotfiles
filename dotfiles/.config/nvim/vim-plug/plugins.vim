@@ -39,7 +39,7 @@ else
     Plug 'preservim/nerdtree'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'ctrlpvim/ctrlp.vim'
+    " Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'jremmen/vim-ripgrep' " conflict with fzf
 
     " == IntelliSense ==
