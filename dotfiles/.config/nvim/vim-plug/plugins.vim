@@ -24,10 +24,11 @@ if exists('g:vscode')
 
 else
     " == Syntax Highlighter ==
-    Plug 'pangloss/vim-javascript'    " JavaScript support
-    Plug 'leafgarland/typescript-vim' " TypeScript syntax
-    Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-    Plug 'jparise/vim-graphql'        " GraphQL syntax
+    Plug 'sheerun/vim-polyglot'         " Language packs
+    " Plug 'pangloss/vim-javascript'    " JavaScript support
+    " Plug 'leafgarland/typescript-vim' " TypeScript syntax
+    " Plug 'jparise/vim-graphql'        " GraphQL syntax
+    " Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
