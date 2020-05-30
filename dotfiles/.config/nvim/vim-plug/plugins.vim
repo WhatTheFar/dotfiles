@@ -57,6 +57,7 @@ else
     " == Git & VCS ==
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
+    Plug 'airblade/vim-gitgutter'
     Plug 'mbbill/undotree'
 
     " == Colors ==
