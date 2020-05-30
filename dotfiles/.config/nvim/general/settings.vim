@@ -35,7 +35,7 @@ if !exists('g:vscode')
     set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
     " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
     " delays and poor user experience.
-    set updatetime=300                      " Faster completion
+    set updatetime=100                      " Faster completion
     set timeoutlen=300                      " By default timeoutlen is 1000 ms
     " set clipboard=unnamedplus               " Copy paste between vim and everything else , for  Linux
     set clipboard=unnamed               " OSX
