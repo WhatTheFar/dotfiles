@@ -130,3 +130,6 @@ nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" Restart coc.
+nnoremap <silent> <space>r  :<C-u>CocRestart<CR>
+xnoremap <silent> <space>r  :<C-u>CocRestart<CR>gv
