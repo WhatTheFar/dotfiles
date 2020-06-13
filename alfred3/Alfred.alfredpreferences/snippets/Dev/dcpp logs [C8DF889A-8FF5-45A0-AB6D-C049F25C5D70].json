@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "docker-compose -f docker-compose.yml -f docker-compose.prod.yml logs -f",
+    "uid" : "C8DF889A-8FF5-45A0-AB6D-C049F25C5D70",
+    "name" : "dcpp logs",
+    "keyword" : ""
+  }
+}
