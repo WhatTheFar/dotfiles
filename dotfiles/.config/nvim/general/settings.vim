@@ -59,9 +59,9 @@ if !exists('g:vscode')
     set colorcolumn=80
     highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-    let g:netrw_browse_split = 2
-    let g:netrw_banner = 0
-    let g:netrw_winsize = 25
+    " let g:netrw_browse_split = 2
+    " let g:netrw_banner = 0
+    " let g:netrw_winsize = 25
 
     " You can't stop me
     cmap w!! w !sudo tee %
