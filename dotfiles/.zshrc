@@ -98,6 +98,8 @@ plugins=(
   fd
   osx
 
+  fzf
+
   docker
   docker-compose
   kubectl
@@ -111,8 +113,18 @@ plugins=(
   golang
 )
 
+# Config fzf-tab-completion
+source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+# bindkey '^I' fzf_completion
+
+# Searching display strings
+# only for git
+# zstyle ':completion:*:*:git' fzf-search-display true
+# or for everything
+zstyle ':completion:*' fzf-search-display true
+
 source $ZSH/oh-my-zsh.sh
-# User configuration 
+# User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
