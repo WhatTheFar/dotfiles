@@ -103,6 +103,7 @@ plugins=(
   kubectl
   minikube
   kops
+  aws
 
   npm
   yarn
