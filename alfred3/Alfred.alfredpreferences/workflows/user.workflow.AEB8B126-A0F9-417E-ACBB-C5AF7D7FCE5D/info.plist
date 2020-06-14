@@ -22,11 +22,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>7617491C-6A8E-4B5C-B925-A544F0BDB009</string>
+				<string>091CCE10-EC1D-48CA-9549-93692343025B</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>Reveal file in Finder</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -166,6 +166,23 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>cd {query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>091CCE10-EC1D-48CA-9549-93692343025B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Using the keyword "f", search for only folders within your home folder.
@@ -173,6 +190,13 @@ end alfred_script</string>
 Hit Return to open the file, or Alt + Return to reveal it in Finder.</string>
 	<key>uidata</key>
 	<dict>
+		<key>091CCE10-EC1D-48CA-9549-93692343025B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
 		<key>7617491C-6A8E-4B5C-B925-A544F0BDB009</key>
 		<dict>
 			<key>note</key>
