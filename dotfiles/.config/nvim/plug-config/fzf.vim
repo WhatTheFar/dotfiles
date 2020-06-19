@@ -34,3 +34,9 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+" Ripgrep with hidden files
+command! -bang -nargs=* Rgh
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case --hidden -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
