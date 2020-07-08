@@ -15,4 +15,4 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
-let g:go_auto_sameids = 1
+" let g:go_auto_sameids = 1
