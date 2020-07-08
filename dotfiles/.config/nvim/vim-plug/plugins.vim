@@ -38,6 +38,7 @@ else
 
     " == Formatter ==
     " Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
+    Plug 'AndrewRadev/splitjoin.vim'
 
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
