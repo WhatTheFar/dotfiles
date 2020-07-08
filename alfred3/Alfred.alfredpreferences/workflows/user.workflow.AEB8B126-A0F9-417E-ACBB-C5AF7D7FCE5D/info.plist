@@ -22,7 +22,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>091CCE10-EC1D-48CA-9549-93692343025B</string>
+				<string>04B877AA-14F5-486C-983D-F06D6BEE6B6E</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
@@ -49,14 +49,11 @@
 				<string>on alfred_script(q)
   -- your script here
 	tell application "iTerm2"
-		tell current window
+		tell current session of current window
 			activate
-			create tab with default profile
-			set nvim_pane to current session
-			
-			tell nvim_pane
-				write text "cd '" &amp; q &amp; "'"
-			end tell
+
+			write text "cd '" &amp; q &amp; "'"
+
 		end tell
 	end tell
 end alfred_script</string>
@@ -156,6 +153,34 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  -- your script here
+	tell application "iTerm2"
+		tell current window
+			activate
+			create tab with default profile
+			set nvim_pane to current session
+			
+			tell nvim_pane
+				write text "cd '" &amp; q &amp; "'"
+			end tell
+		end tell
+	end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>04B877AA-14F5-486C-983D-F06D6BEE6B6E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>path</key>
 				<string></string>
 			</dict>
@@ -190,6 +215,15 @@ end alfred_script</string>
 Hit Return to open the file, or Alt + Return to reveal it in Finder.</string>
 	<key>uidata</key>
 	<dict>
+		<key>04B877AA-14F5-486C-983D-F06D6BEE6B6E</key>
+		<dict>
+			<key>note</key>
+			<string>2. Pressing the Return key opens the folder you selected in iTerm2</string>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
 		<key>091CCE10-EC1D-48CA-9549-93692343025B</key>
 		<dict>
 			<key>xpos</key>
