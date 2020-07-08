@@ -33,8 +33,11 @@ else
     " == Snippets ==
     Plug 'honza/vim-snippets'
 
+    " == Language Server ==
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
     " == Formatter ==
-    Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
+    " Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
 
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
