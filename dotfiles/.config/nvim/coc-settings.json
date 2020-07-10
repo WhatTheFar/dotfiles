@@ -11,5 +11,10 @@
   "explorer.keyMappings": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
+  },
+
+  "go.enable": true,
+  "go.disable": {
+    "workspaceFolders": false
   }
 }
