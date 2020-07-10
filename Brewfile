@@ -96,6 +96,7 @@ brew "bash"
 brew "bash-completion@2"
 brew "fish"
 brew "zsh"
+brew "zsh-completions"
 
 # Vim and Neovim!
 brew "ed"
