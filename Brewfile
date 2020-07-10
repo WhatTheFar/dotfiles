@@ -53,6 +53,7 @@ cask "fork"
 cask "minikube"
 brew "kubernetes-cli"
 brew "kops"
+brew "kubectx"
 
 # Google Cloud SDK
 cask "google-cloud-sdk"
