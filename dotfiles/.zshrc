@@ -123,6 +123,7 @@ source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion
 # or for everything
 zstyle ':completion:*' fzf-search-display true
 
+ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
 source $ZSH/oh-my-zsh.sh
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
