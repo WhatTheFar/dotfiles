@@ -37,7 +37,7 @@ cask "visual-studio-code"
 cask "jetbrains-toolbox"
 
 # VirtualBox
-cask "virtualbox"
+# cask "virtualbox" # install later
 
 # Docker
 cask "docker"
@@ -50,7 +50,7 @@ brew "lazydocker"
 cask "fork"
 
 # Kubernetes
-cask "minikube"
+# cask "minikube" # install later
 brew "kubernetes-cli"
 brew "kops"
 brew "kubectx"
