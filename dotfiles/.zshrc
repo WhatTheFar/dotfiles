@@ -113,15 +113,6 @@ plugins=(
   golang
 )
 
-# Enable zsh-completions
-# brew info zsh-completions
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
-fi
-
 # Config fzf-tab-completion
 source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 # bindkey '^I' fzf_completion
