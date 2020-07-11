@@ -33,5 +33,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo -e "$BLUE--- Installing fzf-tab-completion plugin ---$RESET"
 git clone https://github.com/lincheney/fzf-tab-completion.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab-completion
 
+# Find script directory (no support for symlinks)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 echo
-./scripts/00-linking-dotfiles.sh
+$DIR/00-linking-dotfiles.sh
