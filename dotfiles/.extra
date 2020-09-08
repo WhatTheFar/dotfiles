@@ -38,3 +38,7 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 # Work around "pyenv: gettext.sh: command not found"
 # Issue : shims do not work with gettext (.pyenv/shims/gettext.sh) #688 https://github.com/pyenv/pyenv/issues/688
 export GIT_INTERNAL_GETTEXT_TEST_FALLBACKS=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
