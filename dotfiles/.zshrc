@@ -108,6 +108,7 @@ plugins=(
   minikube
   kops
   aws
+  helm
 
   npm
   yarn
