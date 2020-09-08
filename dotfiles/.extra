@@ -2,6 +2,8 @@
 
 # My Directory Shortcuts
 alias wtf="cd ~/Projects/what_the_far"
+alias scg="cd ~/Projects/scgwedotech"
+alias thinc="cd ~/Projects/thinc"
 
 # Please
 alias please='sudo $(fc -ln -1)'
