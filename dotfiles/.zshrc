@@ -94,6 +94,8 @@ plugins=(
 
   git
 
+  fzf-tab
+
   dotenv
   fd
   osx
@@ -112,16 +114,6 @@ plugins=(
 
   golang
 )
-
-# Config fzf-tab-completion
-source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-# bindkey '^I' fzf_completion
-
-# Searching display strings
-# only for git
-# zstyle ':completion:*:*:git' fzf-search-display true
-# or for everything
-zstyle ':completion:*' fzf-search-display true
 
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
 source $ZSH/oh-my-zsh.sh

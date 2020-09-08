@@ -28,10 +28,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo -e "$BLUE--- Installing zsh-syntax-highlighting plugin ---$RESET"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 2> /dev/null
 
-# Install fzf-tab-completion for Oh-My-ZSH
-# https://github.com/lincheney/fzf-tab-completion
-echo -e "$BLUE--- Installing fzf-tab-completion plugin ---$RESET"
-git clone https://github.com/lincheney/fzf-tab-completion.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab-completion
+# Install fzf-tab for Oh-My-ZSH
+# https://github.com/Aloxaf/fzf-tab
+echo -e "$BLUE--- Installing fzf-tab plugin ---$RESET"
+git clone https://github.com/Aloxaf/fzf-tab.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab
 
 # Find script directory (no support for symlinks)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
