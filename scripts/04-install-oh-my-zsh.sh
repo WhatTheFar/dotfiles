@@ -8,10 +8,10 @@ echo -e "$BLUE--- Installing Oh My Zsh ---$RESET"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo
 
-# Install powerlevel9k for Oh-My-ZSH
-# https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-2-install-for-oh-my-zsh
-echo -e "$BLUE--- Installing Powerlevel9k theme ---$RESET"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k 2> /dev/null
+# Install powerlevel10k for Oh-My-ZSH
+# https://github.com/romkatv/powerlevel10k#oh-my-zsh
+echo -e "$BLUE--- Installing Powerlevel10k theme ---$RESET"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k 2> /dev/null
 
 # Install zsh-completions for Oh-My-ZSH
 # https://github.com/zsh-users/zsh-completions#oh-my-zsh
