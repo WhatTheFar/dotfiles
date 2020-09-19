@@ -18,5 +18,13 @@
   "go.enable": true,
   "go.disable": {
     "workspaceFolders": false
+  },
+
+  "eslint.filetypes": ["javascript", "typescript", "vue"],
+
+  "vetur.format.defaultFormatter.html": "prettier",
+
+  "yaml.schemas": {
+      "kubernetes": "/*.yaml"
   }
 }
