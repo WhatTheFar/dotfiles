@@ -80,7 +80,7 @@ cask "font-firacode-nerd-font"
 cask "font-firamono-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
-cask "font-jetbrains-mono-powerline"
+cask "font-jetbrains-mono-nerd-font"
 
 # ------------------
 #
