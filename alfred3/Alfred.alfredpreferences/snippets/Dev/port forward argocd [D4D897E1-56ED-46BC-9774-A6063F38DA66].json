@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "kubectl port-forward svc\/argocd-server -n argocd 8080:443",
+    "uid" : "D4D897E1-56ED-46BC-9774-A6063F38DA66",
+    "name" : "port forward argocd",
+    "keyword" : "argocd"
+  }
+}
