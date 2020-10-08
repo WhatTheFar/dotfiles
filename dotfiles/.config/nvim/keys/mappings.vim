@@ -67,7 +67,8 @@ else
     inoremap <C-j> <C-\><C-N><C-w>j
     inoremap <C-l> <C-\><C-N><C-w>l
     inoremap <C-k> <C-\><C-N><C-w>k
-    tnoremap <Esc> <C-\><C-n>
+    " tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-\> <C-\><C-n>
 
     " Use alt + hjkl to resize windows
     nnoremap <silent> <M-j>    :resize -2<CR>
