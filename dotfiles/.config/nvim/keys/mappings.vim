@@ -18,7 +18,7 @@ else
     nnoremap <C-p> :Files<CR>
     nnoremap <leader>g :GFiles -oc --exclude-standard<CR>
     nnoremap <leader>p :Commands<CR>
-    " nnoremap <leader>b :Buffers<CR>
+    nnoremap <leader>b :Buffers<CR>
     " nnoremap <leader>t :NERDTreeFocus<CR>
     nnoremap <leader>e :CocCommand explorer<CR>
     nnoremap <leader>u :UndotreeShow<CR>
