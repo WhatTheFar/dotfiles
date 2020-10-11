@@ -22,9 +22,9 @@ echo -e "$BLUE--- Installing pyenv 3.7.2 ---$RESET"
 pyenv install --skip-existing 3.7.2
 
 echo -e "$BLUE--- Creating pyenv virtualenv for neovim ---$RESET"
-pyenv virtualenv 3.7.2 neovim
+pyenv virtualenv 3.7.2 neovim | true
 
 echo -e "$BLUE--- Installing pynvim in neovim ---$RESET"
 pyenv activate neovim
-pip3 install pynvim
+pip3 install --upgrade pynvim
 pyenv deactivate
