@@ -19,3 +19,8 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 # setting for pyenv-virtualenv
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# Volta is a hassle-free way to manage your JavaScript command-line tools.
+# https://github.com/volta-cli/volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
