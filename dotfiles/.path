@@ -4,8 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
 
-export PATH="~/Library/Android/sdk/platform-tools/:$PATH"
-export PATH="~/development/flutter/bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools/:$PATH"
+export PATH="$HOME/development/flutter/bin:$PATH"
 
 # GO
 export GOPATH="$HOME/go"
