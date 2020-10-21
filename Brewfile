@@ -126,9 +126,9 @@ brew "gh"
 #    Programming
 # ------------------
 
-# NodeJS, Yarn
-brew "node", link: false
-brew "yarn", ignore_dependencies: true
+# NodeJS, Yarn (use NVM instead)
+# brew "node", link: false
+# brew "yarn", ignore_dependencies: true
 
 # Go
 brew "go"
