@@ -116,9 +116,11 @@ brew "git-flow"
 brew "git-lfs"
 # brew "bfg"
 brew "gist"
+brew "git-crypt"
 
 # Hub (Git Replacement for GitHub)
 brew "hub"
+brew "gh"
 
 # ------------------
 #    Programming
