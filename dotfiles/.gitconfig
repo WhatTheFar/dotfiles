@@ -189,3 +189,6 @@
 [user]
 	name = WhatTheFar
 	email = jakpat.m@gmail.com
+
+[pull]
+	ff = only
