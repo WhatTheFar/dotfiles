@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "videos = document.getElementsByTagName(\"video\");\nfor(var i = 0; i < videos.length; i++) {\n  videos[i].playbackRate = 2;\n}",
+    "uid" : "B79419AB-A2FB-4493-B2AB-70CF0CAF2384",
+    "name" : "Facebook Video Playback Speed",
+    "keyword" : ""
+  }
+}
