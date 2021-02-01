@@ -19,6 +19,7 @@ tap "homebrew/services"
 
 # Terminal
 cask "iterm2"
+cask "alacritty"
 
 # Alfred
 cask "alfred"
@@ -35,6 +36,9 @@ cask "visual-studio-code"
 
 # JetBrains Toolbox
 cask "jetbrains-toolbox"
+
+# lens
+cask "lens"
 
 # VirtualBox
 # cask "virtualbox" # install later
@@ -63,6 +67,7 @@ cask "google-cloud-sdk"
 # ------------------
 
 cask "slack"
+cask "discord"
 cask "spotify"
 cask "iina"
 cask "flux"
