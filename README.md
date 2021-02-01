@@ -4,6 +4,27 @@
 
 > This setup is heavily inspired from [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 
+## Prerequisite
+
+- Set Apple ID for App Store
+- Run the following codes to:
+  - Install Homebrew
+  - Install oh-my-zsh
+
+```bash
+# install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+## Bootstrapping
+
+```bash
+./bootstrap.sh
+```
+
 ## Manual Setups
 
 ### Keyboard

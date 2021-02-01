@@ -4,9 +4,9 @@ RESET=`tput sgr0`
 BLUE=`tput setaf 30`
 
 # Install Oh My Zsh
-echo -e "$BLUE--- Installing Oh My Zsh ---$RESET"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo
+# echo -e "$BLUE--- Installing Oh My Zsh ---$RESET"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# echo
 
 # Install powerlevel10k for Oh-My-ZSH
 # https://github.com/romkatv/powerlevel10k#oh-my-zsh
