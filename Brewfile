@@ -130,6 +130,10 @@ brew "gh"
 # brew "node", link: false
 # brew "yarn", ignore_dependencies: true
 
+# Python
+brew "pyenv"
+brew "pyenv-virtualenv"
+
 # Go
 brew "go"
 
