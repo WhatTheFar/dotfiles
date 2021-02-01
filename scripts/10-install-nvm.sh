@@ -12,8 +12,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # install or update nvm
 # https://github.com/nvm-sh/nvm
-echo -e "$BLUE--- Installing nvm ---$RESET"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+# echo -e "$BLUE--- Installing nvm ---$RESET"
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 # install volta
 curl https://get.volta.sh | bash -s -- --skip-setup
