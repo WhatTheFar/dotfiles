@@ -103,7 +103,7 @@ brew "ed"
 brew "vim"
 brew "neovim"
 
-brew wget
+brew "wget"
 
 # ------------------
 #        Git
@@ -144,7 +144,7 @@ cask "ngrok"
 # ------------------
 
 # Thefuck - Magnificent app which corrects your previous console command.
-brew thefuck
+brew "thefuck"
 
 # Mac App Store command line interface
 brew "mas"
