@@ -23,6 +23,7 @@ else
     source $HOME/.config/nvim/plug-config/coc.vim
     source $HOME/.config/nvim/plug-config/coc-jest.vim
     source $HOME/.config/nvim/plug-config/coc-explorer.vim
+    source $HOME/.config/nvim/plug-config/coc-extension.vim
     source $HOME/.config/nvim/plug-config/ctrlp.vim
     source $HOME/.config/nvim/plug-config/easy-motion.vim
     source $HOME/.config/nvim/plug-config/fzf.vim
