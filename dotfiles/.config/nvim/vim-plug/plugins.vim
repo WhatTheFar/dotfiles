@@ -47,6 +47,10 @@ else
     " Plug 'justinmk/vim-sneak'
     Plug 'terryma/vim-multiple-cursors'
 
+    Plug 'haya14busa/incsearch.vim'
+    Plug 'haya14busa/incsearch-fuzzy.vim'
+    Plug 'haya14busa/incsearch-easymotion.vim'
+
     " == File Browsing & Search ==
     " Plug 'preservim/nerdtree'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
