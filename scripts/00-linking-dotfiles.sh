@@ -3,13 +3,13 @@
 RESET=`tput sgr0`
 BLUE=`tput setaf 30`
 
-dir="dotfiles"
+dir="src"
 dotfiles=`find . -type f -name "*" -path "./${dir}/*" | sed "s/^\.\/${dir}\///"`
 
 for file in $dotfiles
 do
     echo -e "$BLUE--- Linking $file ---$RESET"
 
-    mkdir -p "$HOME/$(dirname $file)" 
+    mkdir -p "$HOME/$(dirname $file)"
     ln -sf "$(pwd)/$dir/$file" "$HOME/$file"
 done
