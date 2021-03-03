@@ -5,6 +5,7 @@ alias wtf="cd ~/Projects/what_the_far"
 alias scg="cd ~/Projects/scgwedotech"
 alias thinc="cd ~/Projects/thinc"
 alias cleverse="cd ~/Projects/cleverse"
+alias exp="cd ~/Projects/experimental"
 
 # Please
 alias please='sudo $(fc -ln -1)'
