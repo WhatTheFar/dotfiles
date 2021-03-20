@@ -48,7 +48,7 @@
 				<key>applescript</key>
 				<string>on alfred_script(q)
   -- your script here
-	tell application "iTerm2"
+	tell application "iTerm"
 		tell current window
 			activate
 			create tab with default profile
