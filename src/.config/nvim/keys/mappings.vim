@@ -58,6 +58,12 @@ else
     nnoremap <leader>k <C-w>k
     nnoremap <leader>l <C-w>l
 
+    " ContorlEscape debounce
+    inoremap <C-h> <Esc>h
+    inoremap <C-j> <Esc>j
+    inoremap <C-k> <Esc>k
+    inoremap <C-l> <Esc>l
+
     " Terminal window navigation
     " tnoremap <C-h> <C-\><C-N><C-w>h
     " tnoremap <C-j> <C-\><C-N><C-w>j
