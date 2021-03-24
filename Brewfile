@@ -27,6 +27,9 @@ cask "alfred"
 # Google Chrome
 cask "google-chrome"
 
+# Karabiner-elements
+cask "karabiner-elements"
+
 # ------------------
 #    Development
 # ------------------
