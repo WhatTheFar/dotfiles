@@ -24,6 +24,9 @@ pyenv install --skip-existing 3.7.2
 echo -e "$BLUE--- Creating pyenv virtualenv for neovim ---$RESET"
 pyenv virtualenv 3.7.2 neovim | true
 
+echo -e "$BLUE--- Dumping activate_this.py for neovim ---$RESET"
+ln -sf "${DIR%/*}/activate_this.py" "$(pyenv root)/versions/neovim/bin/activate_this.py"
+
 echo -e "$BLUE--- Installing pynvim in neovim ---$RESET"
 pyenv activate neovim
 pip3 install --upgrade pynvim

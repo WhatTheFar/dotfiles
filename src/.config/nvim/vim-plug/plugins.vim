@@ -79,6 +79,9 @@ else
     Plug 'vim-utils/vim-man'
     " Plug 'lyuts/vim-rtags'
 
+    " == Integrations ==
+    Plug 'jupyter-vim/jupyter-vim'
+
 endif
 
 call plug#end()
