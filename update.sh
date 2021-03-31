@@ -4,7 +4,7 @@ RESET=`tput sgr0`
 GREEN=`tput setaf 32`
 BLUE=`tput setaf 34`
 
-dir="update_scripts"
+dir="scripts_update"
 scripts=`ls ${dir}/*.sh | sed "s/^${dir}\///" | grep "^\d"`
 
 echo "> Updating..."
