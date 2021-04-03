@@ -32,6 +32,26 @@ To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold
 
 📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode. ⌨:neckbeard:✨
 
+### Hyper key for quickly launching apps
+
+macOS doesn't have a native <kbd>hyper</kbd> key.
+But thanks to Karabiner-Elements, we can [create our own](src/.config/karabiner/assets/complex_modifications/hyper.json).
+In this setup, we'll use the <kbd>right option</kbd> key as our <kbd>hyper</kbd> key.
+
+With a new modifier key defined, we open a whole world of possibilities.
+I find it especially useful for providing global shortcuts for launching apps.
+
+#### Default app keybindings
+
+- <kbd>hyper</kbd> + <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
+- <kbd>hyper</kbd> + <kbd>c</kbd> to open LINE ("C for "Chat")
+- <kbd>hyper</kbd> + <kbd>d</kbd> to open [Discord](https://discord.com/) ("D" for "Discord")
+- <kbd>hyper</kbd> + <kbd>e</kbd> to open [Atom](https://atom.io) ("E" for "Editor")
+- <kbd>hyper</kbd> + <kbd>f</kbd> to open [Fork](https://git-fork.com/) ("F" for "Fork")
+- <kbd>hyper</kbd> + <kbd>m</kbd> to open [Spotify](https://www.spotify.com/) ("M" for "Music")
+- <kbd>hyper</kbd> + <kbd>s</kbd> to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
+- <kbd>hyper</kbd> + <kbd>t</kbd> to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
+
 ## Prerequisite
 
 - Set Apple ID for App Store
