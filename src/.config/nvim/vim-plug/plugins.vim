@@ -38,8 +38,8 @@ else
     Plug 'honza/vim-snippets'
 
     " == Language Server ==
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    Plug 'google/vim-jsonnet'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+    Plug 'google/vim-jsonnet', { 'for': 'jsonnet' }
 
     " == Formatter ==
     " Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
@@ -84,7 +84,7 @@ else
     " Plug 'lyuts/vim-rtags'
 
     " == Integrations ==
-    Plug 'jupyter-vim/jupyter-vim'
+    Plug 'jupyter-vim/jupyter-vim', { 'for': 'python' }
 
 endif
 
