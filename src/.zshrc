@@ -99,6 +99,8 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 
+  # zsh-vi-mode
+
   git
 
   fzf-tab

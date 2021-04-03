@@ -31,7 +31,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Install fzf-tab for Oh-My-ZSH
 # https://github.com/Aloxaf/fzf-tab
 echo -e "$BLUE--- Installing fzf-tab plugin ---$RESET"
-git clone https://github.com/Aloxaf/fzf-tab.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab
+git clone https://github.com/Aloxaf/fzf-tab.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab 2> /dev/null
+
+# Install
+# https://github.com/jeffreytse/zsh-vi-mode
+echo -e "$BLUE--- Installing zsh-vi-mode plugin ---$RESET"
+git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-vi-mode 2> /dev/null
 
 # Find script directory (no support for symlinks)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
