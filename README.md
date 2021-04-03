@@ -111,9 +111,9 @@ In advanced setting page, set preferences folder to `alfred3`.
 
 ## References
 
-[Bash scripting cheatsheet](https://devhints.io/bash)
-
 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
+
+[Toward a more useful keyboard](https://github.com/jasonrudolph/keyboard)
 
 ## License
 
