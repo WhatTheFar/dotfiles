@@ -51,7 +51,7 @@ I find it especially useful for providing global shortcuts for launching apps.
 - <kbd>hyper</kbd> + <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
 - <kbd>hyper</kbd> + <kbd>c</kbd> to open LINE ("C for "Chat")
 - <kbd>hyper</kbd> + <kbd>d</kbd> to open [Discord](https://discord.com/) ("D" for "Discord")
-- <kbd>hyper</kbd> + <kbd>e</kbd> to open [Atom](https://atom.io) ("E" for "Editor")
+- <kbd>hyper</kbd> + <kbd>e</kbd> to open [Visual Studio Code](https://code.visualstudio.com/) ("E" for "Editor")
 - <kbd>hyper</kbd> + <kbd>f</kbd> to open [Fork](https://git-fork.com/) ("F" for "Fork")
 - <kbd>hyper</kbd> + <kbd>m</kbd> to open [Spotify](https://www.spotify.com/) ("M" for "Music")
 - <kbd>hyper</kbd> + <kbd>s</kbd> to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
