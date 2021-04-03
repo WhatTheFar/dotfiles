@@ -6,6 +6,15 @@
 
 ## Features
 
+### Supercharge <kbd>caps lock</kbd> key
+
+By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>control</kbd> and <kbd>escape</kbd> accessible via the home row.
+
+- Tap <kbd>caps lock</kbd> for <kbd>escape</kbd>
+- Hold <kbd>caps lock</kbd> for <kbd>control</kbd>
+
+Say goodbye to [Emacs pinky](http://wiki.c2.com/?EmacsPinky). 👋
+
 ### (S)uper (D)uper Mode
 
 To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
