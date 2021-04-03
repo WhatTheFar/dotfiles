@@ -10,4 +10,4 @@ if exists('g:vim_virtualenv_path')
 endif
 
 " Set let g:jupyter_mapkeys = 0 in your .vimrc to prevent the default keybindings from being made.
-" let g:jupyter_mapkeys = 0
+let g:jupyter_mapkeys = 0
