@@ -25,7 +25,7 @@ do
     fi
 
     skip=""
-    for entire_dir in $entire_dirs
+    for entire_dir in ${entire_dirs[@]}
     do
         re="^$(path_to_regex $entire_dir)\\/.*\$"
         if [[ "$file" =~ $re ]]; then
@@ -33,9 +33,6 @@ do
             # mkdir -p "$HOME/$entire_dir"
             rm -rf "$HOME/$entire_dir"
             ln -s "$(pwd)/$src/$entire_dir" "$HOME/$entire_dir"
-
-
-            echo -e "$BLUE--- Skipping $file ---$RESET"
 
             linked_dirs=("${linked_dirs[@]}" "${entire_dir}")
             linked_dirs_re="^($(echo "${linked_dirs[@]}" | sed -e 's/\([\/\.]\)/\\\1/g' -e 's/ /|/g')).*$"
@@ -45,6 +42,7 @@ do
         fi
     done
     if [[ -n $skip ]]; then
+        echo -e "$BLUE--- Skipping $file ---$RESET"
         continue
     fi
 
