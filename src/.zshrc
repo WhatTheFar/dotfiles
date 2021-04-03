@@ -13,6 +13,9 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+# Load zsh plugins' config
+source ~/.zsh-plugin
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -99,7 +102,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 
-  # zsh-vi-mode
+  zsh-vi-mode
 
   git
 
