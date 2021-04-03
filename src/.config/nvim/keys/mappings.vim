@@ -53,10 +53,10 @@ else
     nnoremap <C-j> <C-w>j
     nnoremap <C-k> <C-w>k
     nnoremap <C-l> <C-w>l
-    nnoremap <leader>h <C-w>h
-    nnoremap <leader>j <C-w>j
-    nnoremap <leader>k <C-w>k
-    nnoremap <leader>l <C-w>l
+    " nnoremap <leader>h <C-w>h
+    " nnoremap <leader>j <C-w>j
+    " nnoremap <leader>k <C-w>k
+    " nnoremap <leader>l <C-w>l
 
     " ContorlEscape debounce
     inoremap <C-h> <Esc>h
