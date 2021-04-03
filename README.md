@@ -6,6 +6,11 @@
 
 ## Features
 
+- [Access <kbd>control</kbd> and <kbd>escape</kbd> on the home row](#supercharge-caps-lock-key)
+- [Navigate (up/down/left/right) via the home row](#super-duper-mode)
+- [Navigate to previous/next word via the home row](#super-duper-mode)
+- [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
+
 ### Supercharge <kbd>caps lock</kbd> key
 
 By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>control</kbd> and <kbd>escape</kbd> accessible via the home row.
