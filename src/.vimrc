@@ -1,5 +1,5 @@
 source $HOME/.config/nvim/init.vim
-    
+
 let mapleader=" "
 
 " Better indenting
