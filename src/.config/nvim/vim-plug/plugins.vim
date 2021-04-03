@@ -6,6 +6,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !ln -s ~/.config/nvim/autoload/plug.vim ~/.vim/autoload/plug.vim
+endif
+
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
