@@ -532,6 +532,11 @@
                                         "key_code": "right_shift"
                                     }
                                 ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
