@@ -80,14 +80,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ## Manual Setups
 
-### Keyboard
-
-#### Remap CAPS LOCK to ESCAPE
-
-Go to `System Preferences -> Keyboard -> Modifier Keys...` and set Caps Lock Key to `Escape`
-
-![](img/keyboard-keys.png)
-
 ### Accessibility
 
 #### Zoom
