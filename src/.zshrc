@@ -81,6 +81,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  fzf-tab
+
   zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -88,8 +90,6 @@ plugins=(
   # zsh-vi-mode
 
   git
-
-  fzf-tab
 
   dotenv
   fd
@@ -99,19 +99,19 @@ plugins=(
 
   docker
   docker-compose
-  kubectl
   minikube
-  kops
-  aws
+  # kubectl
+  # kops
   helm
+
+  aws
 
   npm
   yarn
-
   golang
 )
 
-ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
+# ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -168,3 +168,19 @@ unset __conda_setup
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# setting for pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:${PATH}
+    eval "$(pyenv init -)"
+fi
+# setting for pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+# NVM
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
