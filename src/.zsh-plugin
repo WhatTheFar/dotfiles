@@ -1,5 +1,7 @@
 
-# zsh-vi-mode
+# ------------------
+#    zsh-vi-mode
+# ------------------
 
 # The plugin will auto execute this zvm_after_init function
 zvm_after_init() {
@@ -7,3 +9,23 @@ zvm_after_init() {
   source ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/fzf-tab/fzf-tab.plugin.zsh
 }
 
+# ------------------
+#   powerlevel9k
+# ------------------
+
+# Customise the Powerlevel9k prompts
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda pyenv)
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# Configure pyenv prompts
+# https://github.com/Powerlevel9k/powerlevel9k#pyenv
+POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
+
+# Load Nerd Fonts with Powerlevel9k theme for Zsh
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+# Add the custom Apple  prompt segment
+POWERLEVEL9K_CUSTOM_APPLE="echo -n '\ue711'"
+POWERLEVEL9K_CUSTOM_APPLE_FOREGROUND="black"
+POWERLEVEL9K_CUSTOM_APPLE_BACKGROUND="white"

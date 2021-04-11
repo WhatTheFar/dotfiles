@@ -28,23 +28,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Customise the Powerlevel9k prompts
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(anaconda pyenv)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-# Configure pyenv prompts
-# https://github.com/Powerlevel9k/powerlevel9k#pyenv
-POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
-
-# Load Nerd Fonts with Powerlevel9k theme for Zsh
-POWERLEVEL9K_MODE='nerdfont-complete'
-
-# Add the custom Apple  prompt segment
-POWERLEVEL9K_CUSTOM_APPLE="echo -n '\ue711'"
-POWERLEVEL9K_CUSTOM_APPLE_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_APPLE_BACKGROUND="white"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -130,6 +113,7 @@ plugins=(
 
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
 source $ZSH/oh-my-zsh.sh
+
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
