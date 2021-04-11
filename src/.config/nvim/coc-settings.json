@@ -1,5 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "vue", "python"],
+  "coc.preferences.formatOnSaveFiletypes": [
+      "javascript",
+      "typescript",
+      /* "vue", */
+      "python"
+  ],
 
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
