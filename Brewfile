@@ -43,8 +43,8 @@ cask "jetbrains-toolbox"
 # lens
 cask "lens"
 
-# VirtualBox
-# cask "virtualbox" # install later
+# Fork
+cask "fork"
 
 # Docker
 cask "docker"
@@ -53,14 +53,11 @@ brew "dive"
 tap "jesseduffield/lazydocker"
 brew "lazydocker"
 
-# Fork
-cask "fork"
-
 # Kubernetes
-# cask "minikube" # install later
 brew "kubernetes-cli"
-brew "kops"
+# brew "kops"
 brew "kubectx"
+# brew "minikube"
 
 # Google Cloud SDK
 cask "google-cloud-sdk"
@@ -74,7 +71,6 @@ cask "discord"
 cask "spotify"
 cask "iina"
 cask "flux"
-cask "cleanmymac"
 cask "the-unarchiver"
 cask "kindle"
 cask "send-to-kindle"
@@ -137,6 +133,7 @@ brew "gh"
 # NodeJS, Yarn (use NVM instead)
 # brew "node", link: false
 # brew "yarn", ignore_dependencies: true
+brew "volta"
 
 # Python
 brew "pyenv"
@@ -179,6 +176,7 @@ brew "ripgrep"
 
 # FX - Command-line JSON processing tool
 brew "fx"
+brew "jq"
 
 # tree - Show the contents of the current directory as a tree.
 brew "tree"
