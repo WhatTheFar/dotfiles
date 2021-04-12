@@ -20,13 +20,13 @@ source ~/.zsh-plugin
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,7 +112,7 @@ plugins=(
 )
 
 # ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -142,14 +142,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"; fi
-
 # Set the `fuck` alias to `thefuck` tool
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -166,21 +160,106 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# setting for pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:${PATH}
-    eval "$(pyenv init -)"
-fi
-# setting for pyenv-virtualenv
-if which pyenv-virtualenv-init > /dev/null; then
-    eval "$(pyenv virtualenv-init -)"
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-# NVM
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
+setopt promptsubst
+PS1="READY >" # provide a simple prompt till the theme loads
+
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
+  blockf atpull'zinit creinstall -q .' \
+      zsh-users/zsh-completions
+
+zinit wait lucid for \
+        OMZL::git.zsh \
+  atload"unalias grv" \
+        OMZP::git
+
+zinit wait lucid light-mode for \
+    Aloxaf/fzf-tab
+
+zinit wait lucid for \
+    OMZP::fzf \
+    OMZP::colored-man-pages \
+    OMZP::docker-compose \
+    OMZP::kubectl \
+    OMZP::helm \
+    OMZP::minikube \
+    OMZP::npm \
+    OMZP::yarn \
+    OMZP::golang
+
+zinit ice wait lucid \
+    atload'function _aws_profiles { \
+        local -a tmp=($(aws_profiles)); \
+        _describe "command" tmp;
+    };
+    compdef _aws_profiles asp acp aws_change_access_key;'
+zinit snippet OMZP::aws
+
+zinit lucid has'docker' for \
+    as'completion' is-snippet \
+        'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker' \
+    as'completion' is-snippet \
+        'https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose' \
+
+# zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+#     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+#     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+# zinit light trapd00r/LS_COLORS
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
+# The next line enables shell command completion for gcloud.
+zinit ice wait lucid blockf if'[[ "$OSTYPE" = *darwin* ]]'
+zinit snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
+    atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
+    as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
+zinit light pyenv/pyenv
+
+zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
+    atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
+    as'command' pick'bin/pyenv-virtualenv' src"zpyenv-virtualenv.zsh" nocompile'!'
+zinit light pyenv/pyenv-virtualenv
+
+# After finishing the configuration wizard change the atload'' ice to:
+# -> atload'source ~/.p10k.zsh; _p9k_precmd'
+zinit ice lucid atload'source ~/.p10k.zsh; _p9k_precmd' nocd
+# [ERROR]: When using instant prompt, Powerlevel10k must be loaded before the first prompt.
+# zinit ice wait'!' lucid atload'source ~/.p10k.zsh; _p9k_precmd' nocd
+zinit light romkatv/powerlevel10k
+
+# [ERROR]: When using Powerlevel10k with instant prompt, prompt_cr must be unset.
+# You can:
+#   - Recommended: call p10k finalize at the end of ~/.zshrc.
+#     You can do this by running the following command:
+
+#       echo '(( ! ${+functions[p10k]} )) || p10k finalize' >>! ~/.zshrc
+(( ! ${+functions[p10k]} )) || p10k finalize
+

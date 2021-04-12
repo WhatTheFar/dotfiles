@@ -136,8 +136,8 @@ brew "gh"
 brew "volta"
 
 # Python
-brew "pyenv"
-brew "pyenv-virtualenv"
+# brew "pyenv"
+# brew "pyenv-virtualenv"
 
 # Go
 brew "go"
