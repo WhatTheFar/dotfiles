@@ -133,7 +133,7 @@ brew "gh"
 # NodeJS, Yarn (use NVM instead)
 # brew "node", link: false
 # brew "yarn", ignore_dependencies: true
-brew "volta"
+# brew "volta"
 
 # Python
 # brew "pyenv"
@@ -168,7 +168,7 @@ brew "bat"
 brew "fd"
 
 # FZF - command-line fuzzy finder
-brew "fzf"
+# brew "fzf"
 
 # Search tools
 brew "the_silver_searcher"
