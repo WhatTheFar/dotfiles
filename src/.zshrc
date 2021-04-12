@@ -80,38 +80,8 @@ source ~/.zsh-plugin
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  fzf-tab
+# plugins=()
 
-  zsh-completions
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-
-  # zsh-vi-mode
-
-  git
-
-  dotenv
-  fd
-  osx
-
-  fzf
-
-  docker
-  docker-compose
-  minikube
-  # kubectl
-  # kops
-  helm
-
-  aws
-
-  npm
-  yarn
-  golang
-)
-
-# ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump"
 # source $ZSH/oh-my-zsh.sh
 
 # User configuration
