@@ -217,10 +217,10 @@ zinit wait lucid for \
 
 zinit ice wait lucid \
     atload'function _aws_profiles {
-        local -a tmp=($(aws_profiles));
-        _describe "command" tmp;
-    };
-    compdef _aws_profiles asp acp aws_change_access_key;'
+        local -a tmp=($(aws_profiles))
+        _describe "command" tmp
+    }
+    compdef _aws_profiles asp acp aws_change_access_key'
 zinit snippet OMZP::aws
 
 zinit lucid has'docker' for \
