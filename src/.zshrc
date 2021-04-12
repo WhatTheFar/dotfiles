@@ -214,8 +214,8 @@ zinit wait lucid for \
     OMZP::golang
 
 zinit ice wait lucid \
-    atload'function _aws_profiles { \
-        local -a tmp=($(aws_profiles)); \
+    atload'function _aws_profiles {
+        local -a tmp=($(aws_profiles));
         _describe "command" tmp;
     };
     compdef _aws_profiles asp acp aws_change_access_key;'
@@ -240,7 +240,20 @@ zinit snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 
 zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-    as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
+    as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!' \
+    atload'
+    # make zsh completion works no need source in zshrc. #1644
+    # https://github.com/pyenv/pyenv/pull/1644
+    _pyenv() {
+        local -a comples
+        if [ "${#words}" -eq 2 ]; then
+        comples=($(pyenv commands))
+        else
+        comples=($(pyenv completions ${words[2,-2]}))
+        fi
+        _describe -t comples 'comples' comples
+    }
+    compdef _pyenv pyenv'
 zinit light pyenv/pyenv
 
 zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
