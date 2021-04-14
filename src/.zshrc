@@ -112,9 +112,6 @@ source ~/.zsh-plugin
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set the `fuck` alias to `thefuck` tool
-# eval "$(thefuck --alias)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -232,6 +229,17 @@ zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
     as'command' pick'bin/pyenv-virtualenv' src"zpyenv-virtualenv.zsh" nocompile'!'
 zinit light pyenv/pyenv-virtualenv
+
+# inspired from thefuck, built-in OMZ plugin
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/thefuck
+# zinit wait lucid for \
+#     OMZP::thefuck \
+zinit ice wait lucid \
+    atclone'thefuck --alias > zthefuck.zsh' atpull'%atclone' \
+    src'zthefuck.zsh' \
+    id-as'thefuck' \
+    if'[[ -n $commands[thefuck] ]]'
+zinit light whatthefar/null
 
 # After finishing the configuration wizard change the atload'' ice to:
 # -> atload'source ~/.p10k.zsh; _p9k_precmd'
