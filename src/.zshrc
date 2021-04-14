@@ -207,27 +207,31 @@ if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.i
 zinit ice wait lucid blockf if'[[ "$OSTYPE" = *darwin* ]]'
 zinit snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
-zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
+zinit ice wait lucid depth'1' \
+    atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-    as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!' \
+    as'command' pick'bin/pyenv' src"zpyenv.zsh" compile'{zpyenv,completions/*}.zsh' nocompile'!' \
     atload'
     # make zsh completion works no need source in zshrc. #1644
     # https://github.com/pyenv/pyenv/pull/1644
     _pyenv() {
         local -a comples
         if [ "${#words}" -eq 2 ]; then
-        comples=($(pyenv commands))
+            comples=($(pyenv commands))
         else
-        comples=($(pyenv completions ${words[2,-2]}))
+            comples=($(pyenv completions ${words[2,-2]}))
         fi
         _describe -t comples 'comples' comples
     }
-    compdef _pyenv pyenv'
+    compdef _pyenv pyenv' \
+    id-as'pyenv'
 zinit light pyenv/pyenv
 
-zinit ice wait lucid atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
+zinit ice wait lucid depth'1' \
+    atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-    as'command' pick'bin/pyenv-virtualenv' src"zpyenv-virtualenv.zsh" nocompile'!'
+    as'command' pick'bin/*' src"zpyenv-virtualenv.zsh" compile'*.zsh' nocompile'!' \
+    id-as'pyenv-virtualenv'
 zinit light pyenv/pyenv-virtualenv
 
 # inspired from thefuck, built-in OMZ plugin
