@@ -80,8 +80,7 @@ cask "send-to-kindle"
 # ------------------
 
 # FuraCode, FuraMono & Hack
-# cask "font-firacode-nerd-font" # unavailable
-# cask "font-firamono-nerd-font" # unavailable
+cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
