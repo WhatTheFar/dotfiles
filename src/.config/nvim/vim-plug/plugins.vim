@@ -72,6 +72,7 @@ else
     " == Git & VCS ==
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'mbbill/undotree'
 
