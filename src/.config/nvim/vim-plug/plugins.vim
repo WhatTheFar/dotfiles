@@ -49,6 +49,7 @@ else
     Plug 'easymotion/vim-easymotion'
     " Plug 'justinmk/vim-sneak'
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'liuchengxu/vista.vim'
 
     Plug 'haya14busa/incsearch.vim'
     Plug 'haya14busa/incsearch-fuzzy.vim'
