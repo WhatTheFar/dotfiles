@@ -17,6 +17,8 @@ Plug 'tpope/vim-commentary'
 " Plug 'preservim/nerdcommenter'
 " == Repeat stuff ==
 Plug 'tpope/vim-repeat'
+" == Counter ==
+Plug 'tpope/vim-speeddating'
 
 if exists('g:vscode')
     " == Text Navigation ==
