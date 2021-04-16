@@ -45,6 +45,7 @@ else
     " == Formatter ==
     " Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
     Plug 'AndrewRadev/splitjoin.vim'
+    Plug 'sbdchd/neoformat'
 
     " == Text Navigation ==
     Plug 'unblevable/quick-scope'
