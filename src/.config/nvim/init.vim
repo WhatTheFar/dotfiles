@@ -30,6 +30,7 @@ else
     source $HOME/.config/nvim/plug-config/jupyter-vim.vim
     " source $HOME/.config/nvim/plug-config/nerdtree.vim
     source $HOME/.config/nvim/plug-config/quick-scope.vim
+    source $HOME/.config/nvim/plug-config/telescope.vim
     source $HOME/.config/nvim/plug-config/vim-go.vim
     source $HOME/.config/nvim/plug-config/vim-fugitive.vim
     source $HOME/.config/nvim/plug-config/vim-polyglot.vim

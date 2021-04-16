@@ -15,10 +15,10 @@ if exists('g:vscode')
 else
     " == Customize ==
     " nnoremap <leader>f :Files<CR>
-    nnoremap <C-p> :Files<CR>
-    nnoremap <leader>g :GFiles -oc --exclude-standard<CR>
-    nnoremap <leader>p :Commands<CR>
-    nnoremap <leader>b :Buffers<CR>
+    " nnoremap <C-p> :Files<CR>
+    " nnoremap <leader>g :GFiles -oc --exclude-standard<CR>
+    " nnoremap <leader>p :Commands<CR>
+    " nnoremap <leader>b :Buffers<CR>
     " nnoremap <leader>t :NERDTreeFocus<CR>
     nnoremap <leader>e :CocCommand explorer<CR>
     nnoremap <leader>u :UndotreeShow<CR>
@@ -57,6 +57,32 @@ else
     " nnoremap <leader>j <C-w>j
     " nnoremap <leader>k <C-w>k
     " nnoremap <leader>l <C-w>l
+
+    "
+    nnoremap <C-q> :call ToggleQFList(1)<CR>
+    nnoremap <leader>q :call ToggleQFList(0)<CR>
+    let g:the_primeagen_qf_l = 0
+    let g:the_primeagen_qf_g = 0
+
+    fun! ToggleQFList(global)
+        if a:global
+            if g:the_primeagen_qf_g == 1
+                let g:the_primeagen_qf_g = 0
+                cclose
+            else
+                let g:the_primeagen_qf_g = 1
+                copen
+            end
+        else
+            if g:the_primeagen_qf_l == 1
+                let g:the_primeagen_qf_l = 0
+                lclose
+            else
+                let g:the_primeagen_qf_l = 1
+                lopen
+            end
+        endif
+    endfun
 
     " ContorlEscape debounce
     inoremap <C-h> <Esc>h
