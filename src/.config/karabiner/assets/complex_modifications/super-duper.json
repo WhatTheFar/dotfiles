@@ -27,6 +27,9 @@
                   }
                 }
               ]
+            },
+            "modifiers": {
+                "optional": ["left_control"]
             }
           },
           "to": [
