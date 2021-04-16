@@ -33,6 +33,8 @@ else
     source $HOME/.config/nvim/plug-config/telescope.vim
     source $HOME/.config/nvim/plug-config/vim-go.vim
     source $HOME/.config/nvim/plug-config/vim-fugitive.vim
+    source $HOME/.config/nvim/plug-config/vim-gitgutter.vim
     source $HOME/.config/nvim/plug-config/vim-polyglot.vim
+    source $HOME/.config/nvim/plug-config/vista.vim
     " source $HOME/.config/nvim/plug-config/ycm.vim
 endif
