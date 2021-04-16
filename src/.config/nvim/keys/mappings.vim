@@ -20,7 +20,7 @@ else
     " nnoremap <leader>p :Commands<CR>
     " nnoremap <leader>b :Buffers<CR>
     " nnoremap <leader>t :NERDTreeFocus<CR>
-    nnoremap <leader>e :CocCommand explorer<CR>
+    " nnoremap <leader>e :CocCommand explorer<CR>
     nnoremap <leader>u :UndotreeShow<CR>
 
     "nnoremap <leader>pv <C-w>v<bar> :Ex <bar> :vertical resize 30<CR>
