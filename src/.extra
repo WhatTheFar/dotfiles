@@ -8,6 +8,9 @@ alias thinc="cd ~/Projects/thinc"
 alias cleverse="cd ~/Projects/cleverse"
 alias exp="cd ~/Projects/experimental"
 
+# Editors
+alias svim='nvim -u ~/.SpaceVim/vimrc'
+
 # Please
 alias please='sudo $(fc -ln -1)'
 
