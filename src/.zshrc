@@ -190,7 +190,7 @@ zinit ice wait lucid \
     compdef _aws_profiles asp acp aws_change_access_key'
 zinit snippet OMZP::aws
 
-zinit lucid has'docker' for \
+zinit wait lucid has'docker' for \
     as'completion' is-snippet \
         'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker' \
     as'completion' is-snippet \
