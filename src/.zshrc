@@ -201,11 +201,12 @@ zinit wait lucid has'docker' for \
 #     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 # zinit light trapd00r/LS_COLORS
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"; fi
-# The next line enables shell command completion for gcloud.
-zinit ice wait lucid blockf if'[[ "$OSTYPE" = *darwin* ]]'
-zinit snippet /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# The next line updates PATH and enables shell command completion for gcloud.
+zinit wait lucid as'null' is-snippet if'[[ "$OSTYPE" = *darwin* ]]' for \
+    atload'source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' \
+        /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc \
+    atload'source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' \
+        /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 zinit ice wait lucid depth'1' \
     atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
