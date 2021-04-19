@@ -69,6 +69,7 @@ else
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'vim-ctrlspace/vim-ctrlspace'
+    Plug 'mhinz/vim-startify'
 
     " == IntelliSense ==
     " Plug 'ycm-core/YouCompleteMe'
