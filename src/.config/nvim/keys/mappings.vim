@@ -13,6 +13,12 @@ if exists('g:vscode')
     nmap <S-Tab> :Tabprev<CR>
 
 else
+    nmap j <Plug>(accelerated_jk_gj)
+    nmap k <Plug>(accelerated_jk_gk)
+    nmap j <Plug>(accelerated_jk_gj_position)
+    nmap k <Plug>(accelerated_jk_gk_position)
+    g:accelerated_jk_enable_deceleration=1
+
     " == Customize ==
     " nnoremap <leader>f :Files<CR>
     " nnoremap <C-p> :Files<CR>

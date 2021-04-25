@@ -17,6 +17,7 @@ Plug 'tpope/vim-commentary'
 " Plug 'preservim/nerdcommenter'
 " == Repeat stuff ==
 Plug 'tpope/vim-repeat'
+Plug 'rhysd/accelerated-jk'
 " == Counter ==
 Plug 'tpope/vim-speeddating'
 " == Unimparied ==
@@ -51,7 +52,8 @@ else
     Plug 'unblevable/quick-scope'
     Plug 'easymotion/vim-easymotion'
     " Plug 'justinmk/vim-sneak'
-    Plug 'terryma/vim-multiple-cursors'
+    " Plug 'terryma/vim-multiple-cursors' " deprecated, use vim-visual-multi instead
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'liuchengxu/vista.vim'
 
     Plug 'haya14busa/incsearch.vim'
