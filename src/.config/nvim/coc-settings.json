@@ -31,5 +31,6 @@
 
   "yaml.schemas": {
       "kubernetes": "/*.yaml"
-  }
+  },
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
