@@ -34,6 +34,37 @@ function gitfetchall() {
         -exec echo \;
 }
 
+# Delete and create tag remotely
+function gittag() {
+    RESET=`tput sgr0`
+    GREEN=`tput setaf 34`
+    BLUE=`tput setaf 32`
+
+    return
+
+    for tag in "$@"; do
+
+        echo -e "$GREEN== TAG: $tag $RESET"
+
+        echo -e "$BLUE--- Delete a local Git tag $tag ---$RESET"
+        git tag -d $tag
+        echo
+        for  remote in $(git remote); do
+            echo -e "$BLUE--- Delete a Git tag $tag from the remote $remote ---$RESET"
+            git push --delete $remote $tag
+        done
+
+        echo
+        echo -e "$BLUE--- Create a new local tag $tag ---$RESET"
+        git tag $tag
+        echo
+        for  remote in $(git remote); do
+            echo -e "$BLUE--- Push the tag to remote $tag ---$RESET"
+            git push origin $tag
+        done
+done
+}
+
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="WhatTheFar"
