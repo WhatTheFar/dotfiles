@@ -45,7 +45,7 @@ let g:coc_explorer_global_presets = {
 \   },
 \ }
 
-nnoremap <leader>e :CocCommand explorer --no-toggle --quit-on-open<CR>
+nnoremap <leader>e :CocCommand explorer --no-toggle<CR>
 
 " Use preset argument to open it
 nmap <leader>erc :CocCommand explorer --preset dotfiles<CR>
