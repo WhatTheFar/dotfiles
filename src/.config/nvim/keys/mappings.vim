@@ -22,6 +22,7 @@ else
     " nnoremap <leader>f :Files<CR>
     " nnoremap <C-p> :Files<CR>
     " nnoremap <leader>g :GFiles -oc --exclude-standard<CR>
+    nnoremap <C-p> :GFiles -oc --exclude-standard<CR>
     " nnoremap <leader>p :Commands<CR>
     " nnoremap <leader>b :Buffers<CR>
     " nnoremap <leader>t :NERDTreeFocus<CR>

@@ -27,7 +27,7 @@ EOF
 nnoremap <leader>t :Telescope<CR>
 
 " Project
-nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
+" nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <leader>pf :lua require('telescope.builtin').find_files()<CR>
 nnoremap <leader>pt :lua require('telescope.builtin').tags()<CR>
 
