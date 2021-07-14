@@ -246,6 +246,12 @@ zinit ice wait lucid \
     if'[[ -n $commands[thefuck] ]]'
 zinit light whatthefar/null
 
+zinit ice wait lucid \
+    atload'. $(pack completion --shell zsh)' \
+    id-as'pack' \
+    if'[[ -n $commands[pack] ]]'
+zinit light whatthefar/null
+
 # After finishing the configuration wizard change the atload'' ice to:
 # -> atload'source ~/.p10k.zsh; _p9k_precmd'
 zinit ice lucid atload'source ~/.p10k.zsh; _p9k_precmd' nocd
