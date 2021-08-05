@@ -34,6 +34,7 @@ else
     source $HOME/.config/nvim/plug-config/telescope.vim
     source $HOME/.config/nvim/plug-config/vim-ctrlspace.vim
     source $HOME/.config/nvim/plug-config/vim-go.vim
+    source $HOME/.config/nvim/plug-config/vim-http.vim
     source $HOME/.config/nvim/plug-config/vim-fugitive.vim
     source $HOME/.config/nvim/plug-config/vim-gitgutter.vim
     source $HOME/.config/nvim/plug-config/vim-polyglot.vim

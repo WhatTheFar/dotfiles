@@ -42,6 +42,7 @@ else
     " == Language Server ==
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
     Plug 'google/vim-jsonnet', { 'for': 'jsonnet' }
+    Plug 'nicwest/vim-http'
 
     " == Formatter ==
     " Plug 'tweekmonster/gofmt.vim'       " Run `gofmt` when you save
