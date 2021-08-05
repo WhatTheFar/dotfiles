@@ -162,7 +162,10 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions
 
 zinit wait lucid for \
+        OMZL::clipboard.zsh \
         OMZL::git.zsh \
+        OMZL::history.zsh \
+        OMZL::termsupport.zsh \
   atload"unalias grv" \
         OMZP::git
 
