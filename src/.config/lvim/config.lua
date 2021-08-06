@@ -26,6 +26,13 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
 -- }
 
+-- additional gitsign.nvim keymappings
+vim.api.nvim_set_keymap("n", "]c", "&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", {noremap = true, silent = true, expr = true})
+vim.api.nvim_set_keymap("n", "[c", "&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", {noremap = true, silent = true, expr = true})
+-- text objects
+vim.api.nvim_set_keymap("o", "ih", ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap("x", "ih", ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', {noremap = true, silent = true})
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
