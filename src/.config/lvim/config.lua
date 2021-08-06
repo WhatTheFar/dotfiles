@@ -65,13 +65,23 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
+lvim.plugins = {
+    {"tpope/vim-repeat"},
+    {"tpope/vim-surround"},
+    {"tpope/vim-speeddating"},
+    -- {"tpope/vim-unimpaired"},
+    {
+      "norcalli/nvim-colorizer.lua",
+      config = function()
+        require("colorizer").setup()
+      end,
+    }
 --     {"folke/tokyonight.nvim"}, {
 --         "ray-x/lsp_signature.nvim",
 --         config = function() require"lsp_signature".on_attach() end,
 --         event = "InsertEnter"
 --     }
--- }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
