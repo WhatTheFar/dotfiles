@@ -45,6 +45,18 @@ lvim.builtin.which_key.mappings["f"] = {
 	"Git Files",
 }
 
+-- Trouble keymappings
+lvim.builtin.which_key.mappings["t"] = {
+	name = "+Trouble",
+	t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+	w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+	d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Document Diagnostics" },
+	q = { "<cmd>TroubleToggle quickfix<cr>", "QuickFix" },
+	l = { "<cmd>TroubleToggle loclist<cr>", "LocationList" },
+	r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
+}
+
 -- additional gitsign.nvim keymappings
 vim.api.nvim_set_keymap(
 	"n",
