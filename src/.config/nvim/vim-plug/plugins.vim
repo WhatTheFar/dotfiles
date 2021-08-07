@@ -1,14 +1,14 @@
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.vim/plugged')
+    silent !curl -fLo ~/.vim/plugged/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    silent !ln -s ~/.config/nvim/autoload/plug.vim ~/.vim/autoload/plug.vim
+    silent !ln -s ~/.vim/plugged/plug.vim ~/.vim/autoload/plug.vim
     " autocmd VimEnter * PlugInstall
     autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+call plug#begin('~/.vim/plugged')
 
 " == Surround ==
 Plug 'tpope/vim-surround'
