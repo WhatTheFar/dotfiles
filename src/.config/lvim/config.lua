@@ -134,10 +134,48 @@ lvim.lang.lua.formatters = {
 
 -- Additional Plugins
 lvim.plugins = {
+	-- General
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-surround" },
-	{ "tpope/vim-speeddating" },
-	-- {"tpope/vim-unimpaired"},
+	{
+		"monaqa/dial.nvim",
+		event = "BufRead",
+		config = function()
+			local dial = require "dial"
+			vim.cmd [[
+    nmap <C-a> <Plug>(dial-increment)
+      nmap <C-x> <Plug>(dial-decrement)
+      vmap <C-a> <Plug>(dial-increment)
+      vmap <C-x> <Plug>(dial-decrement)
+      vmap g<C-a> <Plug>(dial-increment-additional)
+      vmap g<C-x> <Plug>(dial-decrement-additional)
+    ]]
+
+			dial.augends["custom#boolean"] = dial.common.enum_cyclic {
+				name = "boolean",
+				strlist = { "true", "false" },
+			}
+			table.insert(dial.config.searchlist.normal, "custom#boolean")
+
+			-- For Languages which prefer True/False, e.g. python.
+			dial.augends["custom#Boolean"] = dial.common.enum_cyclic {
+				name = "Boolean",
+				strlist = { "True", "False" },
+			}
+			table.insert(dial.config.searchlist.normal, "custom#Boolean")
+		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		-- requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			}
+		end,
+	},
 
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
