@@ -27,11 +27,31 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- }
 
 -- additional gitsign.nvim keymappings
-vim.api.nvim_set_keymap("n", "]c", "&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", {noremap = true, silent = true, expr = true})
-vim.api.nvim_set_keymap("n", "[c", "&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", {noremap = true, silent = true, expr = true})
+vim.api.nvim_set_keymap(
+	"n",
+	"]c",
+	"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'",
+	{ noremap = true, silent = true, expr = true }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"[c",
+	"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'",
+	{ noremap = true, silent = true, expr = true }
+)
 -- text objects
-vim.api.nvim_set_keymap("o", "ih", ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap("x", "ih", ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap(
+	"o",
+	"ih",
+	':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"x",
+	"ih",
+	':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
+	{ noremap = true, silent = true }
+)
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -75,21 +95,21 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-    {"tpope/vim-repeat"},
-    {"tpope/vim-surround"},
-    {"tpope/vim-speeddating"},
-    -- {"tpope/vim-unimpaired"},
-    {
-      "norcalli/nvim-colorizer.lua",
-      config = function()
-        require("colorizer").setup()
-      end,
-    }
---     {"folke/tokyonight.nvim"}, {
---         "ray-x/lsp_signature.nvim",
---         config = function() require"lsp_signature".on_attach() end,
---         event = "InsertEnter"
---     }
+	{ "tpope/vim-repeat" },
+	{ "tpope/vim-surround" },
+	{ "tpope/vim-speeddating" },
+	-- {"tpope/vim-unimpaired"},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
+	--     {"folke/tokyonight.nvim"}, {
+	--         "ray-x/lsp_signature.nvim",
+	--         config = function() require"lsp_signature".on_attach() end,
+	--         event = "InsertEnter"
+	--     }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
