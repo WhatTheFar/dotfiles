@@ -93,6 +93,42 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   }
 -- }
 
+-- javascript
+lvim.lang.javascript.formatters = {
+	{
+		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+		args = {},
+	},
+}
+lvim.lang.javascript.linters = {
+	{
+		exe = "eslint_d", -- can be eslint_d as well
+		args = {},
+	},
+}
+
+-- typescript
+lvim.lang.typescript.formatters = {
+	{
+		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+		args = {},
+	},
+}
+lvim.lang.typescript.linters = {
+	{
+		exe = "eslint_d", -- can be eslint_d as well
+		args = {},
+	},
+}
+
+-- lua
+lvim.lang.lua.formatters = {
+	{
+		exe = "stylua",
+		args = {},
+	},
+}
+
 -- Additional Plugins
 lvim.plugins = {
 	{ "tpope/vim-repeat" },
