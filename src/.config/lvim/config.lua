@@ -273,6 +273,8 @@ lvim.plugins = {
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 
 	-- Colorschemes
+	{ "LunarVim/Colorschemes" },
+	{ "folke/tokyonight.nvim" },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
