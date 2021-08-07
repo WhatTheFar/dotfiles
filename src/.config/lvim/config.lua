@@ -57,6 +57,15 @@ lvim.builtin.which_key.mappings["t"] = {
 	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
 }
 
+-- Spectre keymappings
+lvim.builtin.which_key.mappings["S"] = {
+	name = "+Spectre",
+	s = { ":lua require('spectre').open()<CR>", "Spectre" },
+	w = { ":lua require('spectre').open_visual({select_word=true})<CR>", "Replace Current Word" },
+	p = { "viw:lua require('spectre').open_file_search()<cr>", "Search Current File" },
+}
+lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
+
 -- additional gitsign.nvim keymappings
 vim.api.nvim_set_keymap(
 	"n",
