@@ -66,6 +66,21 @@ lvim.builtin.nvimtree.hide_dotfiles = 0
 lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.autotag.enable = true
+lvim.builtin.treesitter.context_commentstring.enable = true
+lvim.builtin.treesitter.context_commentstring.enable_autocmd = false
+lvim.builtin.treesitter.rainbow.enable = true
+
+-- nvim-comment
+lvim.builtin.comment.on_config_done = function(nvim_comment)
+	nvim_comment.setup {
+		hook = function()
+			if vim.api.nvim_buf_get_option(0, "filetype") == "vue" then
+				require("ts_context_commentstring.internal").update_commentstring()
+			end
+		end,
+	}
+end
 
 -- generic LSP settings
 -- you can set a custom on_attach function that will be used for all the language servers
@@ -135,6 +150,12 @@ lvim.plugins = {
 	{ "tpope/vim-surround" },
 	{ "tpope/vim-speeddating" },
 	-- {"tpope/vim-unimpaired"},
+
+	-- Treesitter
+	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
+	{ "p00f/nvim-ts-rainbow" },
+	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
