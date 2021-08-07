@@ -43,6 +43,7 @@ vim.api.nvim_set_keymap(
 )
 
 -- TODO: configure vim-fugitive
+-- TODO: configure vim-go
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
@@ -271,6 +272,16 @@ lvim.plugins = {
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
 	{ "p00f/nvim-ts-rainbow" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+
+	-- LSP Enhancement
+	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "InsertEnter",
+		config = function()
+			require("lsp_signature").setup()
+		end,
+	},
 
 	-- Colorschemes
 	{ "LunarVim/Colorschemes" },
