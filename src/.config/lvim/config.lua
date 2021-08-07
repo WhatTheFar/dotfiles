@@ -156,6 +156,7 @@ lvim.plugins = {
 	{ "p00f/nvim-ts-rainbow" },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 
+	-- Colorschemes
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
