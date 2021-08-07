@@ -30,6 +30,21 @@ lvim.keys.normal_mode["<Right>"] = ":vertical resize +2<CR>"
 lvim.keys.normal_mode["<A-j>"] = ""
 lvim.keys.normal_mode["<A-k>"] = ""
 
+-- Telescope keymappings
+lvim.builtin.which_key.mappings["sT"] = { ":Telescope<CR>", "Telescope" }
+lvim.builtin.which_key.mappings["sw"] = {
+	"<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<CR>",
+	"Search Word",
+}
+lvim.builtin.which_key.mappings["s/"] = {
+	"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>",
+	"Fuzzy Find Current Buf",
+}
+lvim.builtin.which_key.mappings["f"] = {
+	"<cmd>lua require('telescope.builtin').git_files()<CR>",
+	"Git Files",
+}
+
 -- additional gitsign.nvim keymappings
 vim.api.nvim_set_keymap(
 	"n",
