@@ -14,6 +14,21 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
+-- ControlEscape debounce
+lvim.keys.insert_mode["<C-h>"] = "<Esc>h"
+lvim.keys.insert_mode["<C-j>"] = "<Esc>j"
+lvim.keys.insert_mode["<C-k>"] = "<Esc>k"
+lvim.keys.insert_mode["<C-l>"] = "<Esc>l"
+
+-- use arrow to resize windows
+lvim.keys.normal_mode["<Up>"] = ":resize +2<CR>"
+lvim.keys.normal_mode["<Down>"] = ":resize -2<CR>"
+lvim.keys.normal_mode["<Left>"] = ":vertical resize -2<CR>"
+lvim.keys.normal_mode["<Right>"] = ":vertical resize +2<CR>"
+
+-- remove default mappings from LunarVim
+lvim.keys.normal_mode["<A-j>"] = ""
+lvim.keys.normal_mode["<A-k>"] = ""
 
 -- additional gitsign.nvim keymappings
 vim.api.nvim_set_keymap(
