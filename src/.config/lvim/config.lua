@@ -67,6 +67,7 @@ lvim.builtin.which_key.mappings["S"] = {
 lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
 
 -- additional gitsign.nvim keymappings
+-- TODO: define which_key labels
 vim.api.nvim_set_keymap(
 	"n",
 	"]c",
