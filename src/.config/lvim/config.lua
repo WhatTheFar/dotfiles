@@ -1,5 +1,38 @@
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+local override = {
+	which_key = {
+		opts = {
+			mode = "n", -- NORMAL mode
+			prefix = "",
+			buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+			silent = true, -- use `silent` when creating keymaps
+			noremap = true, -- use `noremap` when creating keymaps
+			nowait = true, -- use `nowait` when creating keymaps
+		},
+		vopts = {
+			mode = "v", -- VISUAL mode
+			prefix = "",
+			buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+			silent = true, -- use `silent` when creating keymaps
+			noremap = true, -- use `noremap` when creating keymaps
+			nowait = true, -- use `nowait` when creating keymaps
+		},
+		mappings = {},
+		vmappings = {},
+	},
+}
+lvim.builtin.which_key.on_config_done = function(wk)
+	local opts = override.which_key.opts
+	local vopts = override.which_key.vopts
+
+	local mappings = override.which_key.mappings
+	local vmappings = override.which_key.vmappings
+
+	wk.register(mappings, opts)
+	wk.register(vmappings, vopts)
+end
+
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
@@ -69,19 +102,16 @@ lvim.builtin.which_key.mappings["S"] = {
 lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
 
 -- additional gitsign.nvim keymappings
--- TODO: define which_key labels
-vim.api.nvim_set_keymap(
-	"n",
-	"]c",
+override.which_key.mappings["]c"] = {
 	"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'",
-	{ noremap = true, silent = true, expr = true }
-)
-vim.api.nvim_set_keymap(
-	"n",
-	"[c",
+	"Next hunk",
+	expr = true,
+}
+override.which_key.mappings["[c"] = {
 	"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'",
-	{ noremap = true, silent = true, expr = true }
-)
+	"Prev hunk",
+	expr = true,
+}
 -- text objects
 vim.api.nvim_set_keymap(
 	"o",
