@@ -93,12 +93,21 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
+-- gitlinker keymappings
+lvim.builtin.which_key.mappings["gy"] = { "Link" }
+lvim.builtin.which_key.vmappings["gy"] = { "Link" }
+
 -- TODO: configure vim-fugitive
 -- TODO: configure vim-go
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+
+lvim.builtin.which_key.setup.plugins.presets.operators = false
+lvim.builtin.which_key.setup.plugins.presets.motions = false
+lvim.builtin.which_key.setup.plugins.presets.text_objects = false
+lvim.builtin.which_key.setup.ignore_missing = true
 
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
