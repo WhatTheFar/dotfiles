@@ -1,6 +1,5 @@
 return {
-	{ "b", "Google Chrome" }, -- "B" for "Browser"
-	{ "c", "Line" }, -- "C" for "Chat"
+	{ "c", "Google Chrome" }, -- "C" for "Chrome"
 	{ "d", "Discord" }, -- "D" for "Discord"
 	{ "e", "Visual Studio Code" }, -- "E" for "Editor"
 	{ "f", "Fork" }, -- "F" for "Fork"
