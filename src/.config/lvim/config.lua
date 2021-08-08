@@ -27,8 +27,8 @@ lvim.keys.normal_mode["<Left>"] = ":vertical resize -2<CR>"
 lvim.keys.normal_mode["<Right>"] = ":vertical resize +2<CR>"
 
 -- remove default mappings from LunarVim
-lvim.keys.normal_mode["<A-j>"] = ""
-lvim.keys.normal_mode["<A-k>"] = ""
+lvim.keys.normal_mode["<A-j>"] = nil
+lvim.keys.normal_mode["<A-k>"] = nil
 
 -- Telescope keymappings
 lvim.builtin.which_key.mappings["sT"] = { ":Telescope<CR>", "Telescope" }
