@@ -319,6 +319,11 @@ lvim.lang.vue.linters = {
 	},
 }
 
+-- tailwindcss
+-- TODO: enable tailwindcss
+-- lvim.lang.tailwindcss.active = true
+-- require("lspconfig").tailwindcss.setup {}
+
 -- lua
 lvim.lang.lua.formatters = {
 	{
