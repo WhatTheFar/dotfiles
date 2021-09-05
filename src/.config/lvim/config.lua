@@ -1,3 +1,5 @@
+vim.api.nvim_command "set relativenumber"
+
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 local override = {
