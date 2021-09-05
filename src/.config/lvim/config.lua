@@ -171,26 +171,15 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.treesitter.autotag.enable = true
+-- https://github.com/JoosepAlviste/nvim-ts-context-commentstring#nvim-comment
 lvim.builtin.treesitter.context_commentstring.enable = true
 lvim.builtin.treesitter.context_commentstring.enable_autocmd = false
 lvim.builtin.treesitter.rainbow.enable = true
 
 -- nvim-comment
-lvim.builtin.comment.on_config_done = function(nvim_comment)
-	nvim_comment.setup {
-		-- Should key mappings be created
-		create_mappings = true,
-		-- Normal mode mapping left hand side
-		line_mapping = "gcc",
-		-- Visual/Operator mapping left hand side
-		operator_mapping = "gc",
-		-- Hook function to call before commenting takes place
-		hook = function()
-			if vim.api.nvim_buf_get_option(0, "filetype") == "vue" then
-				require("ts_context_commentstring.internal").update_commentstring()
-			end
-		end,
-	}
+lvim.builtin.comment.hook = function()
+	-- https://github.com/LunarVim/LunarVim/issues/1134
+	require("ts_context_commentstring.internal").update_commentstring()
 end
 
 -- generic LSP settings
