@@ -307,6 +307,21 @@ lvim.lang.vue.linters = {
 	},
 }
 
+-- yaml
+lvim.lang.yaml.formatters = {
+	{
+		exe = "prettier",
+		args = {},
+	},
+}
+lvim.lang.yaml.lsp.setup.settings = {
+	yaml = {
+		schemas = {
+			kubernetes = "*.yaml",
+		},
+	},
+}
+
 -- tailwindcss
 -- TODO: enable tailwindcss
 -- lvim.lang.tailwindcss.active = true
