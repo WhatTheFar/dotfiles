@@ -515,6 +515,7 @@ lvim.plugins = {
 		},
 		ft = { "fugitive" },
 	},
+	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
 
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
