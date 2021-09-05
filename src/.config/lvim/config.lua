@@ -160,7 +160,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.which_key.setup.plugins.presets.operators = false
 lvim.builtin.which_key.setup.plugins.presets.motions = false
 lvim.builtin.which_key.setup.plugins.presets.text_objects = false
-lvim.builtin.which_key.setup.ignore_missing = true
+lvim.builtin.which_key.setup.ignore_missing = false
 
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
