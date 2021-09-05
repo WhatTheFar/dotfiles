@@ -402,6 +402,12 @@ lvim.plugins = {
 			require("lsp_signature").setup()
 		end,
 	},
+	{
+		"vuki656/package-info.nvim",
+		config = function()
+			require("package-info").setup()
+		end,
+	},
 
 	-- Colorschemes
 	{ "LunarVim/Colorschemes" },
