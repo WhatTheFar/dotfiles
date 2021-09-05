@@ -410,6 +410,55 @@ lvim.plugins = {
 			}
 		end,
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		-- event = "BufReadPre",
+		config = function()
+			require("indent_blankline").setup()
+			require("indent_blankline").setup {
+				-- char = "|",
+				char = "▏",
+				buftype_exclude = { "terminal", "nofile" },
+				filetype_exclude = {
+					"help",
+					"startify",
+					"dashboard",
+					"packer",
+					"neogitstatus",
+					"NvimTree",
+					"Trouble",
+				},
+				show_trailing_blankline_indent = false,
+				show_first_indent_level = false,
+				use_treesitter = true,
+				show_current_context = true,
+				context_patterns = {
+					"class",
+					"return",
+					"function",
+					"method",
+					"^if",
+					"^while",
+					"jsx_element",
+					"^for",
+					"^object",
+					"^table",
+					"block",
+					"arguments",
+					"if_statement",
+					"else_clause",
+					"jsx_element",
+					"jsx_self_closing_element",
+					"try_statement",
+					"catch_clause",
+					"import_statement",
+					"operation_type",
+				},
+			}
+			-- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
+			vim.wo.colorcolumn = "99999"
+		end,
+	},
 
 	-- Git
 	{ "sindrets/diffview.nvim", event = "BufRead" },
