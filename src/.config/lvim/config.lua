@@ -538,6 +538,7 @@ lvim.plugins = {
 			require("package-info").setup()
 		end,
 	},
+	{ "simrat39/symbols-outline.nvim" },
 
 	-- Colorschemes
 	{ "LunarVim/Colorschemes" },
