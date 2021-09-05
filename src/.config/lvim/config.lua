@@ -414,7 +414,6 @@ lvim.plugins = {
 		"lukas-reineke/indent-blankline.nvim",
 		-- event = "BufReadPre",
 		config = function()
-			require("indent_blankline").setup()
 			require("indent_blankline").setup {
 				-- char = "|",
 				char = "▏",
