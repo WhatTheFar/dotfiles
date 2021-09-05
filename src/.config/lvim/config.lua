@@ -381,6 +381,9 @@ lvim.plugins = {
 	},
 
 	-- Navigations
+	-- TODO: add abecodes/tabout.nvim
+	-- TODO: add folke/zen-mode.nvim
+	-- TODO: add folke/twilight.nvim
 	{ "ggandor/lightspeed.nvim", event = "BufRead" },
 	{
 		"windwp/nvim-spectre",
