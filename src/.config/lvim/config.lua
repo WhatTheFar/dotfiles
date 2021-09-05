@@ -301,6 +301,10 @@ lvim.lang.typescript.lsp.setup.on_attach = function(client, bufnr)
 	ts_utils.setup_client(client)
 end
 
+-- react
+lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
+lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
+
 -- lua
 lvim.lang.lua.formatters = {
 	{
