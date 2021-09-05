@@ -91,6 +91,14 @@ lvim.builtin.which_key.mappings["t"] = {
 	r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
 	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
 }
+override.which_key.mappings["[t"] = {
+	"<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<cr>",
+	"Prev Trouble",
+}
+override.which_key.mappings["]t"] = {
+	"<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>",
+	"Next Trouble",
+}
 
 -- Spectre keymappings
 lvim.builtin.which_key.mappings["S"] = {
