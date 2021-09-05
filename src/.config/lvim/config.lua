@@ -305,6 +305,20 @@ end
 lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
 lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
 
+-- vue
+lvim.lang.vue.formatters = {
+	{
+		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
+		args = {},
+	},
+}
+lvim.lang.vue.linters = {
+	{
+		exe = "eslint_d", -- can be eslint_d as well
+		args = {},
+	},
+}
+
 -- lua
 lvim.lang.lua.formatters = {
 	{
