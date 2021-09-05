@@ -109,6 +109,16 @@ lvim.builtin.which_key.mappings["S"] = {
 }
 lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
 
+-- additional LSP keymappings
+override.which_key.mappings["[g"] = {
+	"<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+	"Prev Diagnostic",
+}
+override.which_key.mappings["]g"] = {
+	"<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+	"Next Diagnostic",
+}
+
 -- additional gitsign.nvim keymappings
 override.which_key.mappings["]c"] = {
 	"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'",
