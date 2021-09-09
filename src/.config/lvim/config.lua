@@ -307,6 +307,14 @@ lvim.lang.vue.linters = {
 	},
 }
 
+-- json
+lvim.lang.json.formatters = {
+	{
+		exe = "prettier",
+		args = {},
+	},
+}
+
 -- yaml
 lvim.lang.yaml.formatters = {
 	{
