@@ -322,13 +322,6 @@ lvim.lang.yaml.formatters = {
 		args = {},
 	},
 }
-lvim.lang.yaml.lsp.setup.settings = {
-	yaml = {
-		schemas = {
-			kubernetes = "*.yaml",
-		},
-	},
-}
 
 -- tailwindcss
 -- TODO: enable tailwindcss
