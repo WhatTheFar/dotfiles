@@ -6,6 +6,7 @@ BLUE=`tput setaf 30`
 src="src"
 entire_dirs=(
     '.config/karabiner'
+    '.config/lvim/lsp-settings'
     '.hammerspoon'
 )
 
