@@ -338,6 +338,14 @@ lvim.lang.lua.formatters = {
 	},
 }
 
+-- golang
+lvim.lang.go.formatters = {
+	{
+		exe = "goimports",
+		args = {},
+	},
+}
+
 -- Additional Plugins
 lvim.plugins = {
 	-- General
