@@ -290,6 +290,8 @@ lvim.lang.typescript.lsp.setup.on_attach = function(client, bufnr)
 end
 
 -- react
+lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
+lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
 lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
 lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
 
