@@ -389,8 +389,24 @@ lvim.plugins = {
 
 	-- Navigations
 	-- TODO: add abecodes/tabout.nvim
-	-- TODO: add folke/zen-mode.nvim
-	-- TODO: add folke/twilight.nvim
+	{
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup {
+				plugins = {
+					twilight = { enabled = false }, -- enable to start Twilight when zen mode opens
+				},
+			}
+		end,
+	},
+	{
+		"folke/twilight.nvim",
+		config = function()
+			-- If you have zen-mode installed, then Twilight is activated automatically.
+			-- Refer to the Zen Mode documentation to disable.
+			require("twilight").setup {}
+		end,
+	},
 	{ "ggandor/lightspeed.nvim", event = "BufRead" },
 	{
 		"windwp/nvim-spectre",
