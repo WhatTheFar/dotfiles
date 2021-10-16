@@ -102,6 +102,12 @@ override.which_key.mappings["]t"] = {
 	"Next Trouble",
 }
 
+-- Mode
+lvim.builtin.which_key.mappings["m"] = {
+	name = "+Mode",
+	z = { "<cmd>ZenMode<cr>", "ZenMode" },
+}
+
 -- Spectre keymappings
 lvim.builtin.which_key.mappings["S"] = {
 	name = "+Spectre",
