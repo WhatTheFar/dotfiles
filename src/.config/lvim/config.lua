@@ -2,8 +2,6 @@ vim.api.nvim_command "set relativenumber"
 vim.api.nvim_command "set foldmethod=expr"
 vim.api.nvim_command "set foldexpr=nvim_treesitter#foldexpr()"
 
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 local override = {
 	which_key = {
 		opts = {
@@ -95,14 +93,14 @@ lvim.builtin.which_key.mappings["t"] = {
 	r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
 	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
 }
-override.which_key.mappings["[t"] = {
-	"<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<cr>",
-	"Prev Trouble",
-}
-override.which_key.mappings["]t"] = {
-	"<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>",
-	"Next Trouble",
-}
+-- override.which_key.mappings["[t"] = {
+-- 	"<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<cr>",
+-- 	"Prev Trouble",
+-- }
+-- override.which_key.mappings["]t"] = {
+-- 	"<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>",
+-- 	"Next Trouble",
+-- }
 
 -- Mode
 lvim.builtin.which_key.mappings["m"] = {
@@ -170,7 +168,7 @@ lvim.builtin.which_key.setup.plugins.presets.motions = false
 lvim.builtin.which_key.setup.plugins.presets.text_objects = false
 lvim.builtin.which_key.setup.ignore_missing = false
 
-lvim.builtin.nvimtree.side = "left"
+lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.nvimtree.hide_dotfiles = 0
 
@@ -183,176 +181,123 @@ lvim.builtin.treesitter.context_commentstring.enable = true
 lvim.builtin.treesitter.context_commentstring.enable_autocmd = false
 lvim.builtin.treesitter.rainbow.enable = true
 
--- nvim-comment
-lvim.builtin.comment.hook = function()
-	-- https://github.com/LunarVim/LunarVim/issues/1134
-	require("ts_context_commentstring.internal").update_commentstring()
-end
-
--- generic LSP settings
--- you can set a custom on_attach function that will be used for all the language servers
--- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
-
--- set a formatter if you want to override the default lsp one (if it exists)
--- lvim.lang.python.formatters = {
---   {
---     exe = "black",
---     args = {}
---   }
--- }
--- set an additional linter
--- lvim.lang.python.linters = {
---   {
---     exe = "flake8",
---     args = {}
---   }
--- }
-
--- javascript
-lvim.lang.javascript.formatters = {
-	{
-		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-		args = {},
-	},
-}
-lvim.lang.javascript.linters = {
-	{
-		exe = "eslint_d", -- can be eslint_d as well
-		args = {},
-	},
+-- if you don't want all the parsers change this to a table of the ones you want
+lvim.builtin.treesitter.ensure_installed = {
+	"bash",
+	"c",
+	"javascript",
+	"json",
+	"lua",
+	"python",
+	"typescript",
+	"css",
+	"rust",
+	"java",
+	"yaml",
+	"go",
 }
 
--- typescript
-lvim.lang.typescript.formatters = {
-	{
-		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-		args = {},
-	},
-}
-lvim.lang.typescript.linters = {
-	{
-		exe = "eslint_d", -- can be eslint_d as well
-		args = {},
-	},
-}
--- TODO: enhance nvim-lsp-ts-utils code actions
-local lsp = require "lsp"
-lvim.lang.typescript.lsp.setup.on_attach = function(client, bufnr)
-	lsp.common_on_attach(client, bufnr)
+-- Manually-configured servers
+-- Note: any changes to lvim.lsp.override must be followed by :LvimCacheReset to take effect.
+vim.list_extend(lvim.lsp.override, { "tsserver" })
 
-	-- disable tsserver formatting if you plan on formatting via null-ls
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
-
-	local ts_utils = require "nvim-lsp-ts-utils"
-
-	-- defaults
-	ts_utils.setup {
-		debug = false,
-		disable_commands = false,
-		enable_import_on_completion = false,
-
-		-- import all
-		import_all_timeout = 5000, -- ms
-		import_all_priorities = {
-			buffers = 4, -- loaded buffer names
-			buffer_content = 3, -- loaded buffer content
-			local_files = 2, -- git files or files with relative path markers
-			same_file = 1, -- add to existing import statement
-		},
-		import_all_scan_buffers = 100,
-		import_all_select_source = false,
-
-		-- eslint
-		eslint_enable_code_actions = true,
-		eslint_enable_disable_comments = true,
-		eslint_bin = "eslint",
-		eslint_config_fallback = nil,
-		eslint_enable_diagnostics = false,
-		eslint_show_rule_id = false,
-
-		-- formatting
-		enable_formatting = false,
-		formatter = "prettier",
-		formatter_config_fallback = nil,
-
-		-- update imports on file move
-		update_imports_on_move = false,
-		require_confirmation_on_move = false,
-		watch_dir = nil,
-
-		-- filter diagnostics
-		filter_out_diagnostics_by_severity = {},
-		filter_out_diagnostics_by_code = {},
-	}
-
-	-- required to fix code action ranges and filter diagnostics
-	ts_utils.setup_client(client)
-end
-
--- react
-lvim.lang.javascriptreact.formatters = lvim.lang.javascript.formatters
-lvim.lang.javascriptreact.linters = lvim.lang.javascript.linters
-lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
-lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
-
--- vue
-lvim.lang.vue.formatters = {
-	{
-		exe = "prettier", -- can be prettierd eslint, or eslint_d as well
-		args = {},
-	},
-}
-lvim.lang.vue.linters = {
-	{
-		exe = "eslint_d", -- can be eslint_d as well
-		args = {},
-	},
-}
-
--- json
-lvim.lang.json.formatters = {
+-- set a formatter, this will override the language server formatting capabilities (if it exists)
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
 	{
 		exe = "prettier",
-		args = {},
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "json", "yaml" },
 	},
-}
-
--- yaml
-lvim.lang.yaml.formatters = {
-	{
-		exe = "prettier",
-		args = {},
-	},
-}
-
--- tailwindcss
--- TODO: enable tailwindcss
--- lvim.lang.tailwindcss.active = true
--- require("lspconfig").tailwindcss.setup {}
-
--- lua
-lvim.lang.lua.formatters = {
 	{
 		exe = "stylua",
-		args = {},
+		filetypes = { "lua" },
+	},
+	{
+		exe = "goimports",
+		filetypes = { "go" },
 	},
 }
 
--- golang
-lvim.lang.go.formatters = {
+-- set additional linters
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
 	{
-		exe = "goimports",
-		args = {},
+		exe = "eslint_d",
+		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
 	},
 }
+
+-- TODO: lazy load nvim-lsp-ts-utils
+local tsserver_opts = {
+	-- Only needed for inlayHints. Merge this table with your settings or copy
+	-- it from the source if you want to add your own init_options.
+	init_options = require("nvim-lsp-ts-utils").init_options,
+
+	on_attach = function(client, bufnr)
+		-- disable tsserver formatting if you plan on formatting via null-ls
+		client.resolved_capabilities.document_formatting = false
+		client.resolved_capabilities.document_range_formatting = false
+
+		local ts_utils = require "nvim-lsp-ts-utils"
+
+		-- defaults
+		ts_utils.setup {
+			debug = false,
+			disable_commands = false,
+			enable_import_on_completion = false,
+
+			-- import all
+			import_all_timeout = 5000, -- ms
+			-- lower numbers indicate higher priority
+			import_all_priorities = {
+				same_file = 1, -- add to existing import statement
+				local_files = 2, -- git files or files with relative path markers
+				buffer_content = 3, -- loaded buffer content
+				buffers = 4, -- loaded buffer names
+			},
+			import_all_scan_buffers = 100,
+			import_all_select_source = false,
+
+			-- eslint
+			eslint_enable_code_actions = true,
+			eslint_enable_disable_comments = true,
+			eslint_bin = "eslint",
+			eslint_enable_diagnostics = false,
+			eslint_opts = {},
+
+			-- formatting
+			enable_formatting = false,
+			formatter = "prettier",
+			formatter_opts = {},
+
+			-- update imports on file move
+			update_imports_on_move = false,
+			require_confirmation_on_move = false,
+			watch_dir = nil,
+
+			-- filter diagnostics
+			filter_out_diagnostics_by_severity = {},
+			filter_out_diagnostics_by_code = {},
+
+			-- inlay hints
+			auto_inlay_hints = true,
+			inlay_hints_highlight = "Comment",
+		}
+
+		-- required to fix code action ranges and filter diagnostics
+		ts_utils.setup_client(client)
+
+		-- no default maps, so you may want to define some here
+		-- local opts = { silent = true }
+		-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
+		-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
+		-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
+
+		-- lvim common_on_attach
+		require("lvim.lsp").common_on_attach(client, bufnr)
+	end,
+}
+require("lvim.lsp.manager").setup("tsserver", tsserver_opts)
 
 -- Additional Plugins
 lvim.plugins = {
@@ -554,7 +499,8 @@ lvim.plugins = {
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
 	{ "p00f/nvim-ts-rainbow" },
-	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+	-- already included
+	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 
 	-- LSP Enhancement
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
@@ -585,8 +531,3 @@ lvim.plugins = {
 		end,
 	},
 }
-
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
