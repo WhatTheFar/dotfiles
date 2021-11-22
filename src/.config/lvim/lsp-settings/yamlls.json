@@ -1,5 +1,27 @@
 {
   "yaml.schemas": {
-    "kubernetes": []
+    "kubernetes": [
+      "daemon.yml",
+      "daemon.yaml",
+      "manager.yml",
+      "manager.yaml",
+      "restapi.yml",
+      "restapi.yaml",
+      "role.yml",
+      "role.yaml",
+      "role_binding.yml",
+      "role_binding.yaml",
+      "*onfigma*.yml",
+      "*onfigma*.yaml",
+      "*ngres*.yml",
+      "*ngres*.yaml",
+      "*ecre*.yml",
+      "*ecre*.yaml",
+      "*eployment*.yml",
+      "*eployment*.yaml",
+      "*ervic*.yml",
+      "*ervic*.yaml",
+      "kubectl-edit*.yaml"
+    ]
   }
 }
