@@ -1,6 +1,7 @@
 vim.api.nvim_command "set relativenumber"
 vim.api.nvim_command "set foldmethod=expr"
 vim.api.nvim_command "set foldexpr=nvim_treesitter#foldexpr()"
+vim.api.nvim_command "set foldlevel=1"
 
 local override = {
 	which_key = {
