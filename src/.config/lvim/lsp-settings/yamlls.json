@@ -22,6 +22,10 @@
       "*ervic*.yml",
       "*ervic*.yaml",
       "kubectl-edit*.yaml"
+    ],
+    "https://json.schemastore.org/kustomization.json": [
+      "kustomization.yml",
+      "kustomization.yaml"
     ]
   }
 }
