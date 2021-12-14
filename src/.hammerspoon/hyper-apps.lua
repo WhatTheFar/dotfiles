@@ -1,7 +1,7 @@
 return {
 	{ "c", "Google Chrome" }, -- "C" for "Chrome"
 	{ "d", "Discord" }, -- "D" for "Discord"
-	{ "e", "Visual Studio Code" }, -- "E" for "Editor"
+	{ "v", "Visual Studio Code" }, -- "V" for "VSCode"
 	{ "f", "Fork" }, -- "F" for "Fork"
 	{ "m", "Spotify" }, -- "M" for "Music"
 	{ "s", "Slack" }, -- "S" for "Slack"
