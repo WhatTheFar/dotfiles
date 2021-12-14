@@ -30,6 +30,8 @@ cask "google-chrome"
 # Karabiner-elements
 cask "karabiner-elements"
 
+cask "hammer-spoon"
+
 # ------------------
 #    Development
 # ------------------
