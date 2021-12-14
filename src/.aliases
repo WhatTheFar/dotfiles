@@ -11,10 +11,10 @@ alias -- -="cd -"
 # Vim
 alias vim=lvim
 alias nvim=lvim
-alias lvim=/Users/cleverse/.local/bin/lvim
+alias lvim=$HOME/.local/bin/lvim
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+# alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
