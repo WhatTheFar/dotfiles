@@ -210,11 +210,20 @@ zinit wait lucid has'docker' for \
 # zinit light trapd00r/LS_COLORS
 
 # The next line updates PATH and enables shell command completion for gcloud.
-zinit wait lucid as'null' is-snippet if'[[ "$OSTYPE" = *darwin* ]]' for \
-    atload'source "${HOMEBREW_PREFIX:-/usr/local}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"' \
-        /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc \
-    atload'source "${HOMEBREW_PREFIX:-/usr/local}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' \
-        /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+if [[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ]]; then
+  zinit wait lucid as'null' is-snippet if'[[ "$OSTYPE" = *darwin* ]]' for \
+      atload'source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' \
+          /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc \
+      atload'source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' \
+          /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+fi
+if [[ -f /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ]]; then
+  zinit wait lucid as'null' is-snippet if'[[ "$OSTYPE" = *darwin* ]]' for \
+      atload'source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' \
+          /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc \
+      atload'source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' \
+          /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+fi
 
 zinit ice wait lucid depth'1' \
     atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
