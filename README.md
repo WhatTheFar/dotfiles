@@ -62,17 +62,20 @@ I find it especially useful for providing global shortcuts for launching apps.
 - Set Apple ID for App Store
 - Run the following codes to:
   - Install Homebrew
-  - Install oh-my-zsh
+  - ~~Install oh-my-zsh~~
+  - Install zinit
 
 ```bash
 # install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# install zinit
+# (follow official doc)
 ```
 
 ## Bootstrapping
+
+Warning: do not run this until you know what it does
 
 ```bash
 ./bootstrap.sh
