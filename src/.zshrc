@@ -174,8 +174,9 @@ zinit wait lucid for \
   atload"unalias grv" \
         OMZP::git
 
-# https://github.com/Zsh-Packages/fzf
-zinit pack"bgn-binary+keys" for fzf
+# https://github.com/zdharma-continuum/zinit-packages/tree/main/fzf
+# zinit pack"bgn-binary+keys" for fzf
+zinit pack"default+keys" for fzf
 
 zinit wait lucid light-mode for \
     Aloxaf/fzf-tab
