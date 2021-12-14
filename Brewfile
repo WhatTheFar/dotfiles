@@ -30,7 +30,7 @@ cask "google-chrome"
 # Karabiner-elements
 cask "karabiner-elements"
 
-cask "hammer-spoon"
+cask "hammerspoon"
 
 # ------------------
 #    Development
@@ -52,7 +52,6 @@ cask "fork"
 cask "docker"
 tap "wagoodman/dive"
 brew "dive"
-tap "jesseduffield/lazydocker"
 brew "lazydocker"
 
 # Kubernetes
@@ -75,7 +74,7 @@ cask "iina"
 cask "flux"
 cask "the-unarchiver"
 cask "kindle"
-cask "send-to-kindle"
+# cask "send-to-kindle"
 
 # ------------------
 #       Fonts
@@ -107,6 +106,9 @@ brew "zsh"
 brew "ed"
 brew "vim"
 brew "neovim"
+
+# for LunarVim
+brew "gnu-sed"
 
 brew "wget"
 
