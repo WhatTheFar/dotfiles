@@ -127,6 +127,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# History {{{
+
+# some of these might be handled by OMZL::history.zsh
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/history.zsh
+
+# setopt inc_append_history   # append history list to the history file (important for multiple parallel zsh sessions!)
+# setopt share_history        # import new commands from the history file also in other zsh-session
+# setopt extended_history     # save each command beginning timestamp and the duration to the history file
+# setopt hist_ignore_space    # remove command lines from the history list when the first character on the line is a space
+
+# export HIST_STAMPS="mm/dd/yyyy"
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+# export HISTFILE="$HOME/.zsh_history"
+
+# END History }}}
+
 ### Added by Zinit's installer
 # if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
 #     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
