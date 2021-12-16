@@ -197,6 +197,16 @@ lvim.builtin.treesitter.ensure_installed = {
 	"go",
 }
 
+-- *Must* be *S*olidity not solidity
+-- require("nvim-treesitter.parsers").get_parser_configs().solidity = {
+-- 	install_info = {
+-- 		url = "https://github.com/JoranHonig/tree-sitter-solidity",
+-- 		files = { "src/parser.c" },
+-- 		requires_generate_from_grammar = true,
+-- 	},
+-- 	filetype = "solidity",
+-- }
+
 -- Manually-configured servers
 -- Note: any changes to lvim.lsp.override must be followed by :LvimCacheReset to take effect.
 vim.list_extend(lvim.lsp.override, {
@@ -515,6 +525,7 @@ lvim.plugins = {
 
 	-- Language Pack
 	-- { "ChristianChiarulli/vim-solidity" },
+	{ "tomlion/vim-solidity" },
 
 	-- LSP Enhancement
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
