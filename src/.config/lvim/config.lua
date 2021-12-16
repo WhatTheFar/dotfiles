@@ -199,7 +199,9 @@ lvim.builtin.treesitter.ensure_installed = {
 
 -- Manually-configured servers
 -- Note: any changes to lvim.lsp.override must be followed by :LvimCacheReset to take effect.
-vim.list_extend(lvim.lsp.override, { "tsserver" })
+vim.list_extend(lvim.lsp.override, {
+	-- "tsserver"
+})
 
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
