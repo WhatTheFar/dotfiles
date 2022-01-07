@@ -248,6 +248,9 @@ zinit ice wait lucid depth'1' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
     as'command' pick'bin/pyenv' src"zpyenv.zsh" compile'{zpyenv,completions/*}.zsh' nocompile'!' \
     atload'
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+
     # make zsh completion works no need source in zshrc. #1644
     # https://github.com/pyenv/pyenv/pull/1644
     _pyenv() {
@@ -267,6 +270,8 @@ zinit ice wait lucid depth'1' \
     atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
     as'command' pick'bin/*' src"zpyenv-virtualenv.zsh" compile'*.zsh' nocompile'!' \
+    atload'
+    eval "$(pyenv init -)"' \
     id-as'pyenv-virtualenv'
 zinit light pyenv/pyenv-virtualenv
 
