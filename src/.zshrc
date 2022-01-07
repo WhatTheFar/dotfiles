@@ -253,7 +253,7 @@ zinit ice wait lucid depth'1' \
 
     # make zsh completion works no need source in zshrc. #1644
     # https://github.com/pyenv/pyenv/pull/1644
-    _pyenv() {
+    _pyenv_new() {
         local -a comples
         if [ "${#words}" -eq 2 ]; then
             comples=($(pyenv commands))
@@ -262,7 +262,7 @@ zinit ice wait lucid depth'1' \
         fi
         _describe -t comples 'comples' comples
     }
-    compdef _pyenv pyenv' \
+    compdef _pyenv_new pyenv' \
     id-as'pyenv'
 zinit light pyenv/pyenv
 
