@@ -364,6 +364,14 @@ lvim.plugins = {
 	-- Navigations
 	-- TODO: add abecodes/tabout.nvim
 	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup {
+				easing_function = "quadratic",
+			}
+		end,
+	},
+	{
 		"folke/zen-mode.nvim",
 		config = function()
 			require("zen-mode").setup {
