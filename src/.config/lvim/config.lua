@@ -85,16 +85,16 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 
 -- Trouble keymappings
-lvim.builtin.which_key.mappings["t"] = {
-	name = "+Trouble",
-	t = { "<cmd>TroubleToggle<cr>", "Trouble" },
-	w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
-	d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Document Diagnostics" },
-	q = { "<cmd>TroubleToggle quickfix<cr>", "QuickFix" },
-	l = { "<cmd>TroubleToggle loclist<cr>", "LocationList" },
-	r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
-	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
-}
+-- lvim.builtin.which_key.mappings["t"] = {
+-- 	name = "+Trouble",
+-- 	t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+-- 	w = { "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+-- 	d = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Document Diagnostics" },
+-- 	q = { "<cmd>TroubleToggle quickfix<cr>", "QuickFix" },
+-- 	l = { "<cmd>TroubleToggle loclist<cr>", "LocationList" },
+-- 	r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+-- 	f = { "<cmd>TroubleToggle lsp_definitions<cr>", "Definitions" },
+-- }
 -- override.which_key.mappings["[t"] = {
 -- 	"<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<cr>",
 -- 	"Prev Trouble",
@@ -103,6 +103,18 @@ lvim.builtin.which_key.mappings["t"] = {
 -- 	"<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>",
 -- 	"Next Trouble",
 -- }
+
+-- Harpoon
+lvim.builtin.which_key.mappings["t"] = {
+	name = "+Harpoon",
+	a = { ':lua require("harpoon.mark").add_file()<CR>', "LocationList" },
+	e = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "LocationList" },
+	["1"] = { ':lua require("harpoon.ui").nav_file(1)<CR>', "Navigate to file 1" },
+	["2"] = { ':lua require("harpoon.ui").nav_file(2)<CR>', "Navigate to file 2" },
+	["3"] = { ':lua require("harpoon.ui").nav_file(3)<CR>', "Navigate to file 3" },
+	["4"] = { ':lua require("harpoon.ui").nav_file(4)<CR>', "Navigate to file 4" },
+}
+-- lvim.builtin.which_key.mappings["t"] =
 
 -- Mode
 lvim.builtin.which_key.mappings["m"] = {
@@ -365,6 +377,13 @@ lvim.plugins = {
 
 	-- Navigations
 	-- TODO: add abecodes/tabout.nvim
+	{
+		"ThePrimeagen/harpoon",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("harpoon").setup {}
+		end,
+	},
 	{
 		"karb94/neoscroll.nvim",
 		config = function()
