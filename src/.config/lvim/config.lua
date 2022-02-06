@@ -108,6 +108,7 @@ lvim.builtin.which_key.mappings["t"] = {
 lvim.builtin.which_key.mappings["m"] = {
 	name = "+Mode",
 	z = { "<cmd>ZenMode<cr>", "ZenMode" },
+	t = { "<cmd>Twilight<cr>", "Twilight" },
 }
 
 -- Spectre keymappings
