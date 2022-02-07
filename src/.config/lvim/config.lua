@@ -181,7 +181,13 @@ lvim.builtin.terminal.active = true
 lvim.builtin.which_key.setup.plugins.presets.operators = false
 lvim.builtin.which_key.setup.plugins.presets.motions = false
 lvim.builtin.which_key.setup.plugins.presets.text_objects = false
-lvim.builtin.which_key.setup.ignore_missing = true
+lvim.builtin.which_key.setup.ignore_missing = false
+lvim.builtin.which_key.setup.triggers_blacklist = {
+	-- list of mode / prefixes that should never be hooked by WhichKey
+	-- this is mostly relevant for key maps that start with a native binding
+	-- most people should not need to change this
+	n = { "d" },
+}
 
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
