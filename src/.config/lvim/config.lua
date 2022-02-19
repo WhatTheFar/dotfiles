@@ -134,11 +134,11 @@ lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()
 
 -- additional LSP keymappings
 override.which_key.mappings["[g"] = {
-	"<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+	"<cmd>lua vim.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
 	"Prev Diagnostic",
 }
 override.which_key.mappings["]g"] = {
-	"<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
+	"<cmd>lua vim.diagnostic.goto_next({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
 	"Next Diagnostic",
 }
 
