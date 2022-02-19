@@ -19,4 +19,6 @@ export PATH="$GOPATH/bin:$PATH"
 # https://github.com/volta-cli/volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+# for completion see .zshrc
+fpath=($VOLTA_HOME/completions $fpath)
 

@@ -245,6 +245,14 @@ if [[ -f /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zs
           /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 fi
 
+# volta completoins
+if [[ -f "${HOME}/.volta/bin/volta" ]]; then
+  if [[ ! -f "${HOME}/.volta/completions/_volta" ]]; then
+    mkdir -p ${HOME}/.volta/completions
+    volta completions zsh > "${HOME}/.volta/completions/_volta" 
+  fi
+fi
+
 zinit ice wait lucid depth'1' \
     atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
