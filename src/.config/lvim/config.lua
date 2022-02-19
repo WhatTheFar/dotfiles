@@ -107,19 +107,23 @@ lvim.builtin.which_key.mappings["f"] = {
 -- Harpoon
 lvim.builtin.which_key.mappings["H"] = {
 	name = "+Harpoon",
-	a = { ':lua require("harpoon.mark").add_file()<CR>', "LocationList" },
-	e = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "LocationList" },
+	a = { ':lua require("harpoon.mark").add_file()<CR>', "Mark the file" },
+	e = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Quick Menu" },
 	["1"] = { ':lua require("harpoon.ui").nav_file(1)<CR>', "Navigate to file 1" },
 	["2"] = { ':lua require("harpoon.ui").nav_file(2)<CR>', "Navigate to file 2" },
 	["3"] = { ':lua require("harpoon.ui").nav_file(3)<CR>', "Navigate to file 3" },
 	["4"] = { ':lua require("harpoon.ui").nav_file(4)<CR>', "Navigate to file 4" },
 }
+
+-- Quick Navigations
 lvim.builtin.which_key.mappings["<space>"] = {
-	name = "+More",
-	["1"] = { ':lua require("harpoon.ui").nav_file(1)<CR>', "Navigate to file 1" },
-	["2"] = { ':lua require("harpoon.ui").nav_file(2)<CR>', "Navigate to file 2" },
-	["3"] = { ':lua require("harpoon.ui").nav_file(3)<CR>', "Navigate to file 3" },
-	["4"] = { ':lua require("harpoon.ui").nav_file(4)<CR>', "Navigate to file 4" },
+	name = "+More Navigations",
+	["1"] = { "1gt", "Go to tab 1" },
+	["2"] = { "2gt", "Go to tab 2" },
+	["3"] = { "3gt", "Go to tab 3" },
+	["4"] = { "4gt", "Go to tab 4" },
+	a = { ':lua require("harpoon.mark").add_file()<CR>', "Mark file to Harpoon" },
+	e = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Harpoon Quick Menu" },
 }
 
 -- Mode
