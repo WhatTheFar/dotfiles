@@ -1,4 +1,4 @@
-source $HOME/.config/nvim/init.vim
+" source $HOME/.config/nvim/init.vim
 
 let mapleader=" "
 
