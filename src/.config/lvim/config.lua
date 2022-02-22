@@ -572,7 +572,7 @@ lvim.plugins = {
 	{ "LunarVim/vim-solidity" },
 
 	-- LSP Enhancement
-	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
+	-- { "folke/trouble.nvim", cmd = "TroubleToggle" },
 	{
 		"ray-x/lsp_signature.nvim",
 		event = "InsertEnter",
