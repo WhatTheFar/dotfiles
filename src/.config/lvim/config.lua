@@ -70,6 +70,7 @@ lvim.keys.insert_mode["<A-j>"] = nil
 lvim.keys.insert_mode["<A-k>"] = nil
 
 -- Telescope keymappings
+lvim.builtin.which_key.mappings["E"] = { ":Telescope file_browser<CR>", "File Browser" }
 lvim.builtin.which_key.mappings["sT"] = { ":Telescope<CR>", "Telescope" }
 lvim.builtin.which_key.mappings["sw"] = {
 	"<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<CR>",
@@ -413,6 +414,13 @@ lvim.plugins = {
 
 	-- Navigations
 	-- TODO: add abecodes/tabout.nvim
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		config = function() -- To get telescope-file-browser loaded and working with telescope,
+			-- you need to call load_extension, somewhere after setup function:
+			require("telescope").load_extension "file_browser"
+		end,
+	},
 	{
 		"ThePrimeagen/harpoon",
 		requires = { "nvim-lua/plenary.nvim" },
