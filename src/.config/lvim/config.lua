@@ -144,6 +144,7 @@ lvim.builtin.which_key.mappings["S"] = {
 lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
 
 -- additional LSP keymappings
+lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Rename new" } -- require 'filipdutescu/renamer.nvim'
 override.which_key.mappings["[g"] = {
 	"<cmd>lua vim.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
 	"Prev Diagnostic",
@@ -606,6 +607,14 @@ lvim.plugins = {
 		event = "InsertEnter",
 		config = function()
 			require("lsp_signature").setup()
+		end,
+	},
+	{
+		"filipdutescu/renamer.nvim",
+		branch = "master",
+		requires = { { "nvim-lua/plenary.nvim" } },
+		config = function()
+			require("renamer").setup()
 		end,
 	},
 	{ "jose-elias-alvarez/nvim-lsp-ts-utils" },
