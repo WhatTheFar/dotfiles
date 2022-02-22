@@ -359,28 +359,48 @@ lvim.plugins = {
 		"monaqa/dial.nvim",
 		event = "BufRead",
 		config = function()
-			local dial = require "dial"
-			vim.cmd [[
-    nmap <C-a> <Plug>(dial-increment)
-      nmap <C-x> <Plug>(dial-decrement)
-      vmap <C-a> <Plug>(dial-increment)
-      vmap <C-x> <Plug>(dial-decrement)
-      vmap g<C-a> <Plug>(dial-increment-additional)
-      vmap g<C-x> <Plug>(dial-decrement-additional)
-    ]]
+			vim.api.nvim_set_keymap("n", "<C-a>", require("dial.map").inc_normal(), { noremap = true })
+			vim.api.nvim_set_keymap("n", "<C-x>", require("dial.map").dec_normal(), { noremap = true })
+			vim.api.nvim_set_keymap("v", "<C-a>", require("dial.map").inc_visual(), { noremap = true })
+			vim.api.nvim_set_keymap("v", "<C-x>", require("dial.map").dec_visual(), { noremap = true })
+			vim.api.nvim_set_keymap("v", "g<C-a>", require("dial.map").inc_gvisual(), { noremap = true })
+			vim.api.nvim_set_keymap("v", "g<C-x>", require("dial.map").dec_gvisual(), { noremap = true })
 
-			dial.augends["custom#boolean"] = dial.common.enum_cyclic {
-				name = "boolean",
-				strlist = { "true", "false" },
-			}
-			table.insert(dial.config.searchlist.normal, "custom#boolean")
+			local augend = require "dial.augend"
 
-			-- For Languages which prefer True/False, e.g. python.
-			dial.augends["custom#Boolean"] = dial.common.enum_cyclic {
-				name = "Boolean",
-				strlist = { "True", "False" },
+			require("dial.config").augends:register_group {
+				default = {
+					-- default
+					augend.integer.alias.decimal,
+					augend.integer.alias.hex,
+					augend.date.alias["%Y/%m/%d"],
+					augend.date.alias["%Y-%m-%d"],
+					augend.date.alias["%m/%d"],
+					augend.date.alias["%H:%M"],
+					augend.constant.alias.ja_weekday_full,
+
+					-- alias
+					augend.constant.alias.bool,
+					augend.semver.alias.semver,
+
+					-- hexcolor
+					augend.hexcolor.new {
+						case = "lower",
+					},
+
+					-- custom constand
+					augend.constant.new {
+						elements = { "and", "or" },
+						word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+						cyclic = true, -- "or" is incremented into "and".
+					},
+					augend.constant.new {
+						elements = { "&&", "||" },
+						word = false,
+						cyclic = true,
+					},
+				},
 			}
-			table.insert(dial.config.searchlist.normal, "custom#Boolean")
 		end,
 	},
 	{
