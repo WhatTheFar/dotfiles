@@ -569,8 +569,7 @@ lvim.plugins = {
 	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 
 	-- Language Pack
-	-- { "ChristianChiarulli/vim-solidity" },
-	{ "tomlion/vim-solidity" },
+	{ "LunarVim/vim-solidity" },
 
 	-- LSP Enhancement
 	{ "folke/trouble.nvim", cmd = "TroubleToggle" },
