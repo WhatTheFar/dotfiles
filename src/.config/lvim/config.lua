@@ -608,6 +608,7 @@ lvim.plugins = {
 
 	-- Language Pack
 	{ "LunarVim/vim-solidity" },
+	{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" },
 
 	-- LSP Enhancement
 	-- { "folke/trouble.nvim", cmd = "TroubleToggle" },
