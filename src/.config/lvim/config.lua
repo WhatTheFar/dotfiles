@@ -626,6 +626,13 @@ lvim.plugins = {
 			require("renamer").setup()
 		end,
 	},
+	{
+		"mizlan/iswap.nvim",
+		cmd = { "ISwap", "ISwapWith" },
+		config = function()
+			require("iswap").setup()
+		end,
+	},
 	{ "jose-elias-alvarez/nvim-lsp-ts-utils" },
 	{
 		"vuki656/package-info.nvim",
