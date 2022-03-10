@@ -614,7 +614,10 @@ lvim.plugins = {
 	{
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && yarn install",
-		cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
+		ft = { "markdown" },
+		-- unfortunately does not work
+		-- https://www.reddit.com/r/neovim/comments/ncf32b/how_to_setup_markdown_preview_with_packer/
+		-- cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
 	},
 	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
 
