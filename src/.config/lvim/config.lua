@@ -616,6 +616,7 @@ lvim.plugins = {
 		run = "cd app && yarn install",
 		cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
 	},
+	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
 
 	-- LSP Enhancement
 	-- { "folke/trouble.nvim", cmd = "TroubleToggle" },
