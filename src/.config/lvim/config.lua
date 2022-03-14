@@ -593,22 +593,22 @@ lvim.plugins = {
 		ft = { "fugitive" },
 	},
 	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
-	{
-		"pwntester/octo.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"kyazdani42/nvim-web-devicons",
-		},
-		config = function()
-			require("octo").setup()
-		end,
-		cmd = {
-			"Octo",
-			"OctoAddReviewComment",
-			"OctoAddReviewSuggestion",
-		},
-	},
+	-- {
+	-- 	"pwntester/octo.nvim",
+	-- 	requires = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 		"kyazdani42/nvim-web-devicons",
+	-- 	},
+	-- 	config = function()
+	-- 		require("octo").setup()
+	-- 	end,
+	-- 	cmd = {
+	-- 		"Octo",
+	-- 		"OctoAddReviewComment",
+	-- 		"OctoAddReviewSuggestion",
+	-- 	},
+	-- },
 
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
