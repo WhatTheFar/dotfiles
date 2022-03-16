@@ -310,6 +310,7 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
 	-- null_ls.builtins.diagnostics.eslint,
 	-- null_ls.builtins.diagnostics.eslint_d,
+	null_ls.builtins.diagnostics.golangci_lint,
 }
 
 -- TODO: lazy load nvim-lsp-ts-utils
