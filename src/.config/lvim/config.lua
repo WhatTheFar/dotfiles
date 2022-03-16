@@ -300,27 +300,9 @@ code_actions.setup {
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-	{
-		exe = "prettier",
-		filetypes = {
-			"javascript",
-			"javascriptreact",
-			"typescript",
-			"typescriptreact",
-			"vue",
-			"json",
-			"yaml",
-			"markdown",
-		},
-	},
-	{
-		exe = "stylua",
-		filetypes = { "lua" },
-	},
-	{
-		exe = "goimports",
-		filetypes = { "go" },
-	},
+	null_ls.builtins.formatting.prettier,
+	null_ls.builtins.formatting.stylua,
+	null_ls.builtins.formatting.goimports,
 }
 
 -- set additional linters
