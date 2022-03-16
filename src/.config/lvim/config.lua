@@ -143,6 +143,15 @@ lvim.builtin.which_key.mappings["S"] = {
 }
 lvim.builtin.which_key.vmappings["S"] = { ":lua require('spectre').open_visual()<CR>", "Spectre Visual " }
 
+-- Refactoring.nvim
+lvim.builtin.which_key.vmappings["r"] = {
+	name = "+Refactoring",
+	r = {
+		"<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+		"Refactorings",
+	},
+}
+
 -- additional LSP keymappings
 lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Rename new" } -- require 'filipdutescu/renamer.nvim'
 override.which_key.mappings["[g"] = {
@@ -580,6 +589,17 @@ lvim.plugins = {
 				enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
 				throttle = true, -- Throttles plugin updates (may improve performance)
 			}
+		end,
+	},
+	{
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+		config = function()
+			require("refactoring").setup {}
+			require("telescope").load_extension "refactoring"
 		end,
 	},
 
