@@ -248,6 +248,55 @@ vim.list_extend(lvim.lsp.override, {
 	-- "tsserver"
 })
 
+lvim.lsp.override = {
+	"angularls",
+	"ansiblels",
+	"ccls",
+	"csharp_ls",
+	"cssmodules_ls",
+	"denols",
+	"ember",
+	"emmet_ls",
+	-- "eslint",
+	"eslintls",
+	"golangci_lint_ls",
+	"grammarly",
+	"graphql",
+	"jedi_language_server",
+	"ltex",
+	"ocamllsp",
+	"phpactor",
+	"psalm",
+	"pylsp",
+	"quick_lint_js",
+	"reason_ls",
+	"remark_ls",
+	"rome",
+	"scry",
+	"solang",
+	"solidity_ls",
+	"sorbet",
+	"sourcekit",
+	"spectral",
+	"sqlls",
+	"sqls",
+	"stylelint_lsp",
+	"tailwindcss",
+	"tflint",
+	"verible",
+	"vuels",
+	"zeta_note",
+	"zk",
+}
+
+local null_ls = require "null-ls"
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+	-- null_ls.builtins.code_actions.eslint,
+	-- null_ls.builtins.code_actions.eslint_d,
+}
+
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -277,10 +326,8 @@ formatters.setup {
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-	{
-		exe = "eslint_d",
-		filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
-	},
+	-- null_ls.builtins.diagnostics.eslint,
+	-- null_ls.builtins.diagnostics.eslint_d,
 }
 
 -- TODO: lazy load nvim-lsp-ts-utils
