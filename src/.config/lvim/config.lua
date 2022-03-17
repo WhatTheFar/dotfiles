@@ -329,6 +329,8 @@ linters.setup {
 
 	null_ls.builtins.diagnostics.shellcheck,
 
+	null_ls.builtins.diagnostics.zsh,
+
 	null_ls.builtins.diagnostics.actionlint, -- GitHub Actions
 }
 
