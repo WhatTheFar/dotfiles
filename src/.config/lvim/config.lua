@@ -304,6 +304,8 @@ local code_actions = require "lvim.lsp.null-ls.code_actions"
 code_actions.setup {
 	-- null_ls.builtins.code_actions.eslint,
 	-- null_ls.builtins.code_actions.eslint_d,
+
+	null_ls.builtins.code_actions.shellcheck,
 }
 
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
@@ -312,6 +314,8 @@ formatters.setup {
 	null_ls.builtins.formatting.prettier,
 	null_ls.builtins.formatting.stylua,
 	null_ls.builtins.formatting.goimports,
+
+	null_ls.builtins.formatting.shfmt,
 }
 
 -- set additional linters
@@ -320,6 +324,8 @@ linters.setup {
 	-- null_ls.builtins.diagnostics.eslint,
 	-- null_ls.builtins.diagnostics.eslint_d,
 	null_ls.builtins.diagnostics.golangci_lint,
+
+	null_ls.builtins.diagnostics.shellcheck,
 }
 
 -- Additional Plugins
