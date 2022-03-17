@@ -316,6 +316,8 @@ formatters.setup {
 	null_ls.builtins.formatting.goimports,
 
 	null_ls.builtins.formatting.shfmt,
+
+	null_ls.builtins.formatting.pg_format,
 }
 
 -- set additional linters
