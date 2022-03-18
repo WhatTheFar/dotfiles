@@ -326,6 +326,7 @@ linters.setup {
 	-- null_ls.builtins.diagnostics.eslint,
 	-- null_ls.builtins.diagnostics.eslint_d,
 	null_ls.builtins.diagnostics.golangci_lint,
+	null_ls.builtins.diagnostics.staticcheck,
 
 	null_ls.builtins.diagnostics.shellcheck,
 
