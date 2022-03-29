@@ -6,4 +6,5 @@ return {
 	{ "m", "Spotify" }, -- "M" for "Music"
 	{ "s", "Slack" }, -- "S" for "Slack"
 	{ "t", "iTerm" }, -- "T" for "Terminal"
+	{ "r", "Reminders" }, -- "R" for "Reminders"
 }
