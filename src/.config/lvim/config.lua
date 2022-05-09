@@ -199,7 +199,7 @@ lvim.builtin.which_key.mappings["gg"] = { ":lua require('neogit').open({ kind = 
 -- TODO: configure vim-go
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
 
 lvim.builtin.which_key.setup.plugins.presets.operators = false
