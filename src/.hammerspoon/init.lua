@@ -1,1 +1,1 @@
-require('hyper')
+require "hyper"
