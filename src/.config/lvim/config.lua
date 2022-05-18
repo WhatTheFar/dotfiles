@@ -153,7 +153,7 @@ lvim.builtin.which_key.vmappings["r"] = {
 }
 
 -- additional LSP keymappings
-lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Rename new" } -- require 'filipdutescu/renamer.nvim'
+lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Renamer" } -- require 'filipdutescu/renamer.nvim'
 override.which_key.mappings["[g"] = {
 	"<cmd>lua vim.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
 	"Prev Diagnostic",
