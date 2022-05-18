@@ -193,7 +193,7 @@ lvim.builtin.which_key.mappings["gy"] = { "Link" }
 lvim.builtin.which_key.vmappings["gy"] = { "Link" }
 
 -- Neogit
-lvim.builtin.which_key.mappings["gg"] = { ":lua require('neogit').open({ kind = 'split'})<CR>", "Neogit" }
+lvim.builtin.which_key.mappings["G"] = { ":lua require('neogit').open({ kind = 'split'})<CR>", "Neogit" }
 
 -- TODO: configure vim-fugitive
 -- TODO: configure vim-go
