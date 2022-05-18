@@ -201,6 +201,7 @@ lvim.builtin.which_key.mappings["gg"] = { ":lua require('neogit').open({ kind = 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.terminal.active = true
+lvim.builtin.notify.active = true
 
 lvim.builtin.which_key.setup.plugins.presets.operators = false
 lvim.builtin.which_key.setup.plugins.presets.motions = false
@@ -390,7 +391,7 @@ lvim.plugins = {
 	},
 	{
 		"folke/todo-comments.nvim",
-		-- requires = "nvim-lua/plenary.nvim",
+		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup {}
 		end,
@@ -663,7 +664,8 @@ lvim.plugins = {
 	{ "simrat39/symbols-outline.nvim" },
 
 	-- Colorschemes
-	{ "LunarVim/Colorschemes" },
+	-- { "LunarVim/Colorschemes" },
+	{ "lunarvim/darkplus.nvim" },
 	{ "folke/tokyonight.nvim" },
 	{
 		"norcalli/nvim-colorizer.lua",
