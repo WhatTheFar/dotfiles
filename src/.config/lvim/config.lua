@@ -640,7 +640,7 @@ lvim.plugins = {
 	},
 	{
 		"filipdutescu/renamer.nvim",
-		branch = "master",
+		branch = "develop", -- NOTE: usually use master; https://github.com/filipdutescu/renamer.nvim/issues/117
 		requires = { { "nvim-lua/plenary.nvim" } },
 		config = function()
 			require("renamer").setup()
