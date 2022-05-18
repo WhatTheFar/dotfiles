@@ -253,50 +253,9 @@ lvim.builtin.treesitter.ensure_installed = {
 -- }
 
 -- Manually-configured servers
--- Note: any changes to lvim.lsp.override must be followed by :LvimCacheReset to take effect.
-vim.list_extend(lvim.lsp.override, {
-	-- "tsserver"
-})
-
-lvim.lsp.override = {
-	"angularls",
-	"ansiblels",
-	"ccls",
-	"csharp_ls",
-	"cssmodules_ls",
-	"denols",
-	"ember",
-	"emmet_ls",
-	-- "eslint",
-	"eslintls",
-	"golangci_lint_ls",
-	"grammarly",
-	"graphql",
-	"jedi_language_server",
-	"ltex",
-	"ocamllsp",
-	"phpactor",
-	"psalm",
-	"pylsp",
-	"quick_lint_js",
-	"reason_ls",
-	"remark_ls",
-	"rome",
-	"scry",
-	"solang",
-	"solidity_ls",
-	"sorbet",
-	"sourcekit",
-	"spectral",
-	"sqlls",
-	"sqls",
-	"stylelint_lsp",
-	"tailwindcss",
-	"tflint",
-	"verible",
-	"vuels",
-	"zeta_note",
-	"zk",
+-- NOTE: Any changes to lvim.lsp.automatic_configuration.skipped_servers must be followed by :LvimCacheReset to take effect.
+lvim.lsp.automatic_configuration.skipped_servers = {
+	-- "tsserver",
 }
 
 local null_ls = require "null-ls"
