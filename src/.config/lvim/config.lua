@@ -538,7 +538,15 @@ lvim.plugins = {
 		},
 		ft = { "fugitive" },
 	},
-	{ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" },
+	{
+		"TimUntersberger/neogit",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("neogit").setup {
+				disable_commit_confirmation = true,
+			}
+		end,
+	},
 	-- {
 	-- 	"pwntester/octo.nvim",
 	-- 	requires = {
