@@ -22,3 +22,9 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # for completion see .zshrc
 fpath=($VOLTA_HOME/completions $fpath)
 
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Java (homebrew info java)
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
