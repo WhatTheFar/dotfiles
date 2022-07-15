@@ -186,9 +186,15 @@
 
 	insteadOf = "gist:"
 
+[init]
+	defaultBranch = main
+
 [user]
 	name = WhatTheFar
 	email = jakpat.m@gmail.com
 
 [pull]
 	ff = only
+
+[includeIf "gitdir:~/Projects/moby-lab/"] # include for all .git projects under moby-lab/ 
+  path = ~/Projects/moby-lab/.gitconfig
