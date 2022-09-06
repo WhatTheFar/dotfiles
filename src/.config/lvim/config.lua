@@ -592,14 +592,21 @@ lvim.plugins = {
 
 	-- Language Pack
 	{ "LunarVim/vim-solidity" },
-	{
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && yarn install",
-		ft = { "markdown" },
-		-- unfortunately does not work
-		-- https://www.reddit.com/r/neovim/comments/ncf32b/how_to_setup_markdown_preview_with_packer/
-		-- cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
-	},
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	run = "cd app && npm install",
+	-- 	setup = function()
+	-- 		vim.g.mkdp_filetypes = { "markdown" }
+	-- 	end,
+	-- 	ft = { "markdown" },
+	-- },
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	run = function()
+	-- 		vim.fn["mkdp#util#install"]()
+	-- 	end,
+	-- },
+	{ "iamcco/markdown-preview.nvim" },
 	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
 
 	-- LSP Enhancement
