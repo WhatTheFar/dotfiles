@@ -648,7 +648,6 @@ lvim.plugins = {
 	-- { "LunarVim/Colorschemes" },
 	{ "lunarvim/darkplus.nvim" },
 	{ "LunarVim/horizon.nvim" },
-	{ "lunarvim/onedarker.nvim" },
 	{ "LunarVim/tokyonight.nvim" },
 	-- { "folke/tokyonight.nvim" },
 	-- { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
