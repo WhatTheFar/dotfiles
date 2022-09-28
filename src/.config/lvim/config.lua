@@ -40,7 +40,8 @@ end
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "onedarker"
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+lvim.colorscheme = "catppuccin"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
