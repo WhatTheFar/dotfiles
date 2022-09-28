@@ -643,9 +643,14 @@ lvim.plugins = {
 	{ "simrat39/symbols-outline.nvim" },
 
 	-- Colorschemes
+	{ "catppuccin/nvim", as = "catppuccin" },
 	-- { "LunarVim/Colorschemes" },
 	{ "lunarvim/darkplus.nvim" },
-	{ "folke/tokyonight.nvim" },
+	{ "LunarVim/horizon.nvim" },
+	{ "lunarvim/onedarker.nvim" },
+	{ "LunarVim/tokyonight.nvim" },
+	-- { "folke/tokyonight.nvim" },
+	-- { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
