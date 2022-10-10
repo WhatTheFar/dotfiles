@@ -663,7 +663,7 @@ lvim.plugins = {
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	-- TODO: {"RRethy/nvim-treesitter-textsubjects"},
 	{
-		"romgrk/nvim-treesitter-context",
+		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
 			require("treesitter-context").setup {
 				enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
