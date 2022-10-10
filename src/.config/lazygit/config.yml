@@ -1,0 +1,11 @@
+# os:
+#   editCommand: "floaterm"
+
+git:
+  paging:
+    colorArg: always
+    # If the custom pager uses less under the hood, that will also break rendering (hence the --paging=never flag for the delta pager).
+    pager: delta --dark --paging=never
+
+gui:
+  showIcons: true
