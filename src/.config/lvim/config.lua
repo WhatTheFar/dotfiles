@@ -310,6 +310,8 @@ lvim.plugins = {
 	-- General
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-surround" },
+	-- TODO: replace with { "kylechui/nvim-surround" }
+	-- {"windwp/nvim-autopairs"}, -- battery included
 	{
 		"monaqa/dial.nvim",
 		event = "BufRead",
