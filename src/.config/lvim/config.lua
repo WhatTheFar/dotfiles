@@ -295,6 +295,9 @@ linters.setup {
 	-- null_ls.builtins.diagnostics.actionlint, -- GitHub Actions
 }
 
+-- TODO: explore cbfmt, markdownlint, commitlint, codespell, editorconfig_checker
+-- TODO: https://github.com/jayp0521/mason-null-ls.nvim
+
 -- Additional Plugins
 lvim.plugins = {
 	-- General
