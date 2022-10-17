@@ -424,7 +424,7 @@ lvim.plugins = {
 	{ "tpope/vim-repeat" },
 	{ "tpope/vim-surround" },
 	-- TODO: replace with { "kylechui/nvim-surround" }
-	-- {"windwp/nvim-autopairs"}, -- battery included
+	-- {"windwp/nvim-autopairs"}, -- NOTE: battery included
 	{
 		"monaqa/dial.nvim",
 		event = "BufRead",
@@ -755,8 +755,7 @@ lvim.plugins = {
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
 	{ "p00f/nvim-ts-rainbow" },
-	-- already included
-	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }, -- NOTE: battery included
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	-- TODO: {"RRethy/nvim-treesitter-textsubjects"},
 	{
