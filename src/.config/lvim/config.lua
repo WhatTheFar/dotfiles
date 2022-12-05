@@ -621,7 +621,13 @@ lvim.plugins = {
 	},
 
 	-- Git
-	{ "sindrets/diffview.nvim", event = "BufRead" },
+	{
+		"sindrets/diffview.nvim",
+		event = "BufRead",
+		config = function()
+			require("diffview").setup()
+		end,
+	},
 	{
 		"ruifm/gitlinker.nvim",
 		event = "BufRead",
