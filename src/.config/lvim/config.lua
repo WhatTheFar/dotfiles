@@ -35,6 +35,56 @@ lvim.builtin.which_key.on_config_done = function(wk)
 
 	wk.register(mappings, opts)
 	wk.register(vmappings, vopts)
+
+	-- https://github.com/sindrets/diffview.nvim/issues/217
+	-- vim.api.nvim_create_autocmd("BufWinEnter", {
+	-- 	pattern = "DiffviewFilePanel",
+	-- 	callback = function(ctx)
+	-- 		local thisOpts = {
+	-- 			mode = "n", -- NORMAL mode
+	-- 			prefix = "<leader>",
+	-- 			buffer = ctx.buf,
+	-- 			silent = true,
+	-- 			noremap = true,
+	-- 			nowait = true,
+	-- 		}
+	-- 		local mapping = {
+	-- 			["<tab>"] = { "", "Open the diff for next file" },
+	-- 			["<s-tab>"] = { "", "Open the diff for next file" },
+
+	-- 			["<leader>e"] = { "", "Focus file panel" },
+	-- 			["<leader>b"] = { "", "Toggle file panel" },
+
+	-- 			["[x"] = { "", "Previous conflict" },
+	-- 			["]x"] = { "", "Next conflict" },
+	-- 		}
+	-- 		wk.register(mapping, thisOpts)
+	-- 	end,
+	-- })
+
+	-- vim.api.nvim_create_autocmd("FileType", {
+	-- 	pattern = "DiffviewFiles",
+	-- 	callback = function(ctx)
+	-- 		local opts = {
+	-- 			mode = "n", -- NORMAL mode
+	-- 			prefix = "<leader>",
+	-- 			buffer = ctx.buf,
+	-- 			silent = true,
+	-- 			noremap = true,
+	-- 			nowait = true,
+	-- 		}
+	-- 		local mapping = {
+	-- 			["a"] = { "", "Work" },
+	-- 			-- ["<leader>c"] = { "", "Conflict" },
+	-- 			-- ["<leader>co"] = { "", "Choose the OURS version of a conflict" },
+	-- 			-- ["<leader>ct"] = { "", "Choose the THEIRS version of a conflict" },
+	-- 			-- ["<leader>cb"] = { "", "Choose the BASE version of a conflict" },
+	-- 			-- ["<leader>ca"] = { "", "Choose all the versions of a conflict" },
+	-- 			-- ["dx"] = { "", "Delete the conflict region" },
+	-- 		}
+	-- 		wk.register(mapping, opts)
+	-- 	end,
+	-- })
 end
 
 -- general
