@@ -28,3 +28,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Java (homebrew info java)
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+# google-cloud-sdk
+if [ -d "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin" ]; then
+  export PATH="/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
+fi
