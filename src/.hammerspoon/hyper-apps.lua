@@ -8,4 +8,6 @@ return {
 	{ "t", "iTerm" }, -- "T" for "Terminal"
 	{ "w", "Logseq" }, -- "W" for "Write"
 	{ "r", "Reminders" }, -- "R" for "Reminders"
+
+	{ "b", "Basecamp 3" }, -- "B" for "Basecamp"
 }
