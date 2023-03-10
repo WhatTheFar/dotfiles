@@ -1,7 +1,8 @@
 return {
+	{ "a", "Arc" }, -- "A" for "Arc"
 	{ "c", "Google Chrome" }, -- "C" for "Chrome"
 	{ "d", "Discord" }, -- "D" for "Discord"
-	{ "v", "Visual Studio Code" }, -- "V" for "VSCode"
+	{ "v", "Voicemod" }, -- "V" for "Voicemod"
 	{ "f", "Fork" }, -- "F" for "Fork"
 	{ "m", "Spotify" }, -- "M" for "Music"
 	{ "s", "Slack" }, -- "S" for "Slack"
