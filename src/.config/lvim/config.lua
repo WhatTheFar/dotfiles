@@ -524,7 +524,7 @@ lvim.plugins = {
 	},
 	{
 		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup {}
 		end,
@@ -547,7 +547,7 @@ lvim.plugins = {
 	},
 	{
 		"ThePrimeagen/harpoon",
-		requires = { "nvim-lua/plenary.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("harpoon").setup {}
 		end,
@@ -695,7 +695,7 @@ lvim.plugins = {
 				},
 			}
 		end,
-		requires = "nvim-lua/plenary.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
 	},
 	{
 		"tpope/vim-fugitive",
@@ -718,7 +718,7 @@ lvim.plugins = {
 	},
 	{
 		"TimUntersberger/neogit",
-		requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
 		config = function()
 			require("neogit").setup {
 				disable_commit_confirmation = true,
@@ -729,7 +729,7 @@ lvim.plugins = {
 					-- Requires you to have `sindrets/diffview.nvim` installed.
 					-- use {
 					--   'TimUntersberger/neogit',
-					--   requires = {
+					--   dependencies = {
 					--     'nvim-lua/plenary.nvim',
 					--     'sindrets/diffview.nvim'
 					--   }
@@ -742,7 +742,7 @@ lvim.plugins = {
 	},
 	{
 		"ldelossa/gh.nvim",
-		requires = { { "ldelossa/litee.nvim" } },
+		dependencies = { { "ldelossa/litee.nvim" } },
 		config = function()
 			require("litee.lib").setup()
 			require("litee.gh").setup {
@@ -792,7 +792,7 @@ lvim.plugins = {
 	},
 	-- {
 	-- 	"pwntester/octo.nvim",
-	-- 	requires = {
+	-- 	dependencies = {
 	-- 		"nvim-lua/plenary.nvim",
 	-- 		"nvim-telescope/telescope.nvim",
 	-- 		"kyazdani42/nvim-web-devicons",
@@ -824,7 +824,7 @@ lvim.plugins = {
 	},
 	{
 		"ThePrimeagen/refactoring.nvim",
-		requires = {
+		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
@@ -865,7 +865,7 @@ lvim.plugins = {
 	{
 		"filipdutescu/renamer.nvim",
 		branch = "master",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		dependencies = { { "nvim-lua/plenary.nvim" } },
 		config = function()
 			require("renamer").setup()
 		end,
@@ -880,7 +880,7 @@ lvim.plugins = {
 	{ "jose-elias-alvarez/nvim-lsp-ts-utils" },
 	{
 		"vuki656/package-info.nvim",
-		requires = "MunifTanjim/nui.nvim",
+		dependencies = "MunifTanjim/nui.nvim",
 		config = function()
 			require("package-info").setup()
 		end,
@@ -888,7 +888,7 @@ lvim.plugins = {
 	{ "simrat39/symbols-outline.nvim" },
 
 	-- Colorschemes
-	{ "catppuccin/nvim", as = "catppuccin" },
+	{ "catppuccin/nvim", name = "catppuccin" },
 	-- { "LunarVim/Colorschemes" },
 	{ "lunarvim/darkplus.nvim" },
 	{ "LunarVim/horizon.nvim" },
