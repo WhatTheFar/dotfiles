@@ -1,6 +1,6 @@
 return {
 	{ "a", "Arc" }, -- "A" for "Arc"
-	{ "c", "Google Chrome" }, -- "C" for "Chrome"
+	{ "c", "Cron" }, -- "C" for "Cron"
 	{ "d", "Discord" }, -- "D" for "Discord"
 	{ "v", "Voicemod" }, -- "V" for "Voicemod"
 	{ "f", "Fork" }, -- "F" for "Fork"
