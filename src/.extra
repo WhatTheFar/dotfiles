@@ -7,7 +7,6 @@ alias dotcredentials="cd ~/Projects/what_the_far/dotcredentials"
 alias scg="cd ~/Projects/scgwedotech"
 alias thinc="cd ~/Projects/thinc"
 alias cleverse="cd ~/Projects/cleverse"
-alias exp="cd ~/Projects/experimental"
 
 # Editors
 alias svim='nvim -u ~/.SpaceVim/vimrc'
@@ -24,44 +23,44 @@ alias dcpp="docker-compose -f docker-compose.yml -f docker-compose.prod.yml"
 
 # gitignore.io API
 function gi() {
-    curl -sL "https://www.gitignore.io/api/$@" ;
+	curl -sL "https://www.gitignore.io/api/$@"
 }
 
 # Fetch all git recursively
 function gitfetchall() {
-    find . -type d -name .git \
-        -exec echo "$(tput setaf 34)--- Fetching {} ---$(tput sgr0)" \; \
-        -execdir git fetch --all \; \
-        -exec echo \;
+	find . -type d -name .git \
+		-exec echo "$(tput setaf 34)--- Fetching {} ---$(tput sgr0)" \; \
+		-execdir git fetch --all \; \
+		-exec echo \;
 }
 
 # Delete and create tag remotely
 function gittag() {
-    RESET=`tput sgr0`
-    GREEN=`tput setaf 34`
-    BLUE=`tput setaf 32`
+	RESET=$(tput sgr0)
+	GREEN=$(tput setaf 34)
+	BLUE=$(tput setaf 32)
 
-    for tag in "$@"; do
+	for tag in "$@"; do
 
-        echo -e "$GREEN== TAG: $tag $RESET"
+		echo -e "$GREEN== TAG: $tag $RESET"
 
-        echo -e "$BLUE--- Delete the tag \"$tag\" from local ---$RESET"
-        git tag -d $tag
-        echo
-        for  remote in $(git remote); do
-            echo -e "$BLUE--- Delete the tag \"$tag\" from remote \"$remote\" ---$RESET"
-            git push --delete $remote $tag
-        done
+		echo -e "$BLUE--- Delete the tag \"$tag\" from local ---$RESET"
+		git tag -d $tag
+		echo
+		for remote in $(git remote); do
+			echo -e "$BLUE--- Delete the tag \"$tag\" from remote \"$remote\" ---$RESET"
+			git push --delete $remote $tag
+		done
 
-        echo
-        echo -e "$BLUE--- Create a new local tag \"$tag\" ---$RESET"
-        git tag $tag
-        echo
-        for  remote in $(git remote); do
-            echo -e "$BLUE--- Push the tag \"$tag\" to remote \"$remote\" ---$RESET"
-            git push $remote $tag
-        done
-done
+		echo
+		echo -e "$BLUE--- Create a new local tag \"$tag\" ---$RESET"
+		git tag $tag
+		echo
+		for remote in $(git remote); do
+			echo -e "$BLUE--- Push the tag \"$tag\" to remote \"$remote\" ---$RESET"
+			git push $remote $tag
+		done
+	done
 }
 
 # Git credentials
@@ -76,4 +75,3 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 # Work around "pyenv: gettext.sh: command not found"
 # Issue : shims do not work with gettext (.pyenv/shims/gettext.sh) #688 https://github.com/pyenv/pyenv/issues/688
 export GIT_INTERNAL_GETTEXT_TEST_FALLBACKS=1
-
