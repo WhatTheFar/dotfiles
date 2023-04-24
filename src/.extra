@@ -7,6 +7,7 @@ alias dotcredentials="cd ~/Projects/what_the_far/dotcredentials"
 alias scg="cd ~/Projects/scgwedotech"
 alias thinc="cd ~/Projects/thinc"
 alias cleverse="cd ~/Projects/cleverse"
+alias softnetics="cd ~/Projects/softnetics"
 
 # Editors
 alias svim='nvim -u ~/.SpaceVim/vimrc'
