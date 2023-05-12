@@ -835,7 +835,6 @@ lvim.plugins = {
 	},
 
 	-- Language Pack
-	{ "LunarVim/vim-solidity" },
 	{ "mfussenegger/nvim-jdtls" },
 	-- {
 	-- 	"iamcco/markdown-preview.nvim",
