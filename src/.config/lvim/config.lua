@@ -466,10 +466,6 @@ linters.setup {
 	-- null_ls.builtins.diagnostics.actionlint, -- GitHub Actions
 }
 
-lvim.builtin.cmp.formatting = {
-	format = require("tailwindcss-colorizer-cmp").formatter,
-}
-
 -- TODO: explore cbfmt, markdownlint, commitlint, codespell, editorconfig_checker
 -- TODO: https://github.com/jayp0521/mason-null-ls.nvim
 
