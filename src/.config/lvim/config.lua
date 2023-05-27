@@ -473,8 +473,15 @@ linters.setup {
 lvim.plugins = {
 	-- General
 	{ "tpope/vim-repeat" },
-	{ "tpope/vim-surround" },
-	-- TODO: replace with { "kylechui/nvim-surround" }
+	{
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup {
+				-- Configuration here, or leave empty to use defaults
+			}
+		end,
+	},
 	-- {"windwp/nvim-autopairs"}, -- NOTE: battery included
 	{
 		"monaqa/dial.nvim",
