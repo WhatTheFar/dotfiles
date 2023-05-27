@@ -466,6 +466,10 @@ linters.setup {
 	-- null_ls.builtins.diagnostics.actionlint, -- GitHub Actions
 }
 
+lvim.builtin.cmp.formatting = {
+	format = require("tailwindcss-colorizer-cmp").formatter,
+}
+
 -- TODO: explore cbfmt, markdownlint, commitlint, codespell, editorconfig_checker
 -- TODO: https://github.com/jayp0521/mason-null-ls.nvim
 
@@ -870,6 +874,18 @@ lvim.plugins = {
 	-- },
 	{ "iamcco/markdown-preview.nvim" },
 	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
+	{
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup {
+				color_square_width = 2,
+			}
+			lvim.builtin.cmp.formatting = {
+				format = require("tailwindcss-colorizer-cmp").formatter,
+			}
+		end,
+	},
 
 	-- LSP Enhancement
 	{
