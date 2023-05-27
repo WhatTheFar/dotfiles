@@ -856,6 +856,21 @@ lvim.plugins = {
 	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
 
 	-- LSP Enhancement
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup {}
+		end,
+	},
+	{
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
 	-- { "folke/trouble.nvim", cmd = "TroubleToggle" },
 	{
 		"ray-x/lsp_signature.nvim",
