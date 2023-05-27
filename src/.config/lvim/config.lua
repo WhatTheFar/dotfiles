@@ -204,7 +204,6 @@ lvim.builtin.which_key.vmappings["r"] = {
 }
 
 -- additional LSP keymappings
-lvim.builtin.which_key.mappings["l"]["r"] = { "<cmd>lua require('renamer').rename()<cr>", "Renamer" } -- require 'filipdutescu/renamer.nvim'
 override.which_key.mappings["[g"] = {
 	"<cmd>lua vim.diagnostic.goto_prev({popup_opts = {border = lvim.lsp.popup_border}})<cr>",
 	"Prev Diagnostic",
@@ -916,14 +915,7 @@ lvim.plugins = {
 			require("lsp_signature").setup()
 		end,
 	},
-	{
-		"filipdutescu/renamer.nvim",
-		branch = "master",
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-		config = function()
-			require("renamer").setup()
-		end,
-	},
+	{ "stevearc/dressing.nvim" },
 	{
 		"mizlan/iswap.nvim",
 		cmd = { "ISwap", "ISwapWith" },
