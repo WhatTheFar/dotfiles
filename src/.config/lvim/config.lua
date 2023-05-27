@@ -880,6 +880,12 @@ lvim.plugins = {
 			require("copilot_cmp").setup()
 		end,
 	},
+	{
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup()
+		end,
+	},
 	-- { "folke/trouble.nvim", cmd = "TroubleToggle" },
 	{
 		"ray-x/lsp_signature.nvim",
