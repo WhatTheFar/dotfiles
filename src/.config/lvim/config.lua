@@ -448,6 +448,11 @@ formatters.setup {
 	null_ls.builtins.formatting.shfmt,
 
 	null_ls.builtins.formatting.pg_format,
+
+	-- solidity
+	null_ls.builtins.formatting.prettier.with {
+		filetypes = { "solidity" },
+	},
 }
 
 -- set additional linters
@@ -1016,17 +1021,17 @@ lvim.plugins = {
 		cmd = "Copilot",
 		event = "InsertEnter",
 		config = function()
-			require("copilot").setup {}
+			require("copilot").setup {
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			}
 		end,
 	},
 	{
 		"zbirenbaum/copilot-cmp",
 		after = { "copilot.lua" },
 		config = function()
-			require("copilot").setup {
-				suggestion = { enabled = false },
-				panel = { enabled = false },
-			}
+			require("copilot_cmp").setup()
 		end,
 	},
 	{
