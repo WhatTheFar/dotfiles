@@ -1075,7 +1075,7 @@ lvim.plugins = {
 	-- { "folke/tokyonight.nvim" },
 	-- { "shaunsingh/oxocarbon.nvim", run = "./install.sh" },
 	{
-		"norcalli/nvim-colorizer.lua",
+		"NvChad/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
 		end,
