@@ -433,7 +433,7 @@ local null_ls = require "null-ls"
 local code_actions = require "lvim.lsp.null-ls.code_actions"
 code_actions.setup {
 	-- null_ls.builtins.code_actions.eslint,
-	-- null_ls.builtins.code_actions.eslint_d,
+	null_ls.builtins.code_actions.eslint_d,
 
 	null_ls.builtins.code_actions.shellcheck,
 }
@@ -459,7 +459,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
 	-- null_ls.builtins.diagnostics.eslint,
-	-- null_ls.builtins.diagnostics.eslint_d,
+	null_ls.builtins.diagnostics.eslint_d,
 	null_ls.builtins.diagnostics.golangci_lint,
 	null_ls.builtins.diagnostics.staticcheck,
 
