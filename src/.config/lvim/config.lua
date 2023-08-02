@@ -463,7 +463,7 @@ linters.setup {
 	null_ls.builtins.diagnostics.golangci_lint.with {
 		extra_args = { "--fast" },
 	},
-	null_ls.builtins.diagnostics.staticcheck,
+	-- null_ls.builtins.diagnostics.staticcheck,
 
 	null_ls.builtins.diagnostics.shellcheck,
 
