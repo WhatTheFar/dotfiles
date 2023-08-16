@@ -432,8 +432,8 @@ local null_ls = require "null-ls"
 
 local code_actions = require "lvim.lsp.null-ls.code_actions"
 code_actions.setup {
-	-- null_ls.builtins.code_actions.eslint,
-	null_ls.builtins.code_actions.eslint_d,
+	null_ls.builtins.code_actions.eslint,
+	-- null_ls.builtins.code_actions.eslint_d,
 
 	null_ls.builtins.code_actions.shellcheck,
 }
@@ -961,7 +961,6 @@ lvim.plugins = {
 
 	-- Treesitter
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter" },
-	{ "p00f/nvim-ts-rainbow" },
 	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }, -- NOTE: battery included
 	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 	-- TODO: {"RRethy/nvim-treesitter-textsubjects"},
