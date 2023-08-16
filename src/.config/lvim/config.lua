@@ -176,6 +176,8 @@ lvim.builtin.which_key.mappings["<space>"] = {
 	["4"] = { "4gt", "Go to tab 4" },
 	a = { ':lua require("harpoon.mark").add_file()<CR>', "Mark file to Harpoon" },
 	e = { ':lua require("harpoon.ui").toggle_quick_menu()<CR>', "Harpoon Quick Menu" },
+	s = { ':lua require("telescope").extensions.git_worktree.git_worktrees()<CR>', "Switch Git Worktree" },
+	c = { ':lua require("telescope").extensions.git_worktree.create_git_worktree()<CR>', "Create Git Worktree" },
 }
 
 -- Mode
@@ -565,6 +567,13 @@ lvim.plugins = {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("harpoon").setup {}
+		end,
+	},
+	{
+		"ThePrimeagen/git-worktree.nvim",
+		config = function()
+			require("git-worktree").setup {}
+			require("telescope").load_extension "git_worktree"
 		end,
 	},
 	-- {
