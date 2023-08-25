@@ -168,6 +168,10 @@ lvim.builtin.which_key.mappings["H"] = {
 }
 
 -- Quick Navigations
+lvim.builtin.which_key.mappings["1"] = { "1gt", "Go to tab 1" }
+lvim.builtin.which_key.mappings["2"] = { "2gt", "Go to tab 2" }
+lvim.builtin.which_key.mappings["3"] = { "3gt", "Go to tab 3" }
+lvim.builtin.which_key.mappings["4"] = { "4gt", "Go to tab 4" }
 lvim.builtin.which_key.mappings["<space>"] = {
 	name = "+More Navigations",
 	["1"] = { "1gt", "Go to tab 1" },
