@@ -254,6 +254,13 @@ if [[ -f /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zs
           /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 fi
 
+# bun completions
+if [[ -s "/${HOME}/.bun/_bun" ]]; then
+  zinit wait lucid as'null' is-snippet if'[[ "$OSTYPE" = *darwin* ]]' for \
+      atload'source "/${HOME}/.bun/_bun"' \
+          "/${HOME}/.bun/_bun"
+fi
+
 # volta completoins
 if [[ -f "${HOME}/.volta/bin/volta" ]]; then
   if [[ ! -f "${HOME}/.volta/completions/_volta" ]]; then
