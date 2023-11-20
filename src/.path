@@ -19,6 +19,9 @@ export PATH="$GOPATH/bin:$PATH"
 # https://github.com/volta-cli/volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+# pnpm Support
+# https://docs.volta.sh/advanced/pnpm
+export VOLTA_FEATURE_PNPM=1
 # for completion see .zshrc
 fpath=($VOLTA_HOME/completions $fpath)
 
