@@ -1,8 +1,8 @@
 return {
 	{ "a", "Arc" }, -- "A" for "Arc"
-	{ "c", "Cron" }, -- "C" for "Cron"
+	{ "c", "Notion Calendar" }, -- "C" for "Calendar"
+	{ "n", "Notion" }, -- "N" for "Notion"
 	{ "d", "Discord" }, -- "D" for "Discord"
-	{ "v", "Voicemod" }, -- "V" for "Voicemod"
 	{ "f", "Fork" }, -- "F" for "Fork"
 	{ "g", "Figma" }, -- "G" for "Graphic???" just near T
 	{ "m", "Spotify" }, -- "M" for "Music"
