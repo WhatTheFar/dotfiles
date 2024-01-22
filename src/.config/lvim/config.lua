@@ -318,6 +318,9 @@ lvim.builtin.which_key.setup.triggers_blacklist = {
 	n = { "d" },
 }
 
+-- Telescope config
+lvim.builtin.telescope.defaults.path_display = { truncate = 3, shorten = { len = 3, exclude = { -1, -2, -3 } } }
+
 lvim.builtin.nvimtree.setup.view.side = "left"
 
 -- if you don't want all the parsers change this to a table of the ones you want
