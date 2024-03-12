@@ -427,15 +427,10 @@ lvim.builtin.treesitter.ensure_installed = {
 -- Manually-configured servers
 ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
-
----remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
----`:LvimInfo` lists which server(s) are skipped for the current filetype
--- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
---   return server ~= "emmet_ls"
--- end, lvim.lsp.automatic_configuration.skipped_servers)
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solidity" })
+lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
+	return server ~= "solidity_ls_nomicfoundation"
+end, lvim.lsp.automatic_configuration.skipped_servers)
 
 local null_ls = require "null-ls"
 
@@ -1017,8 +1012,18 @@ lvim.plugins = {
 	-- 		vim.fn["mkdp#util#install"]()
 	-- 	end,
 	-- },
-	{ "iamcco/markdown-preview.nvim" },
-	{ "ellisonleao/glow.nvim", cmd = { "Glow", "GlowInstall" } },
+	-- {
+	-- 	"toppair/peek.nvim",
+	-- 	event = { "VeryLazy" },
+	-- 	build = "deno task --quiet build:fast",
+	-- 	config = function()
+	-- 		require("peek").setup()
+	-- 		-- refer to `configuration to change defaults`
+	-- 		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+	-- 		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+	-- 	end,
+	-- },
+	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 	{
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		-- optionally, override the default options:
