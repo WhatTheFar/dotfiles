@@ -196,8 +196,8 @@
 [pull]
 	ff = only
 
-[includeIf "gitdir:~/Projects/moby-lab/"] # include for all .git projects under moby-lab/ 
-  path = ~/Projects/moby-lab/.gitconfig
+[include]
+  path = ~/Projects/what_the_far/dotcredentials/.gitconfig
 
 [core]
   pager = delta
