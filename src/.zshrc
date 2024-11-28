@@ -138,6 +138,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Rust
+. "$HOME/.cargo/env"
+
 # History {{{
 
 # some of these might be handled by OMZL::history.zsh
