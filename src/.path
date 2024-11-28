@@ -15,6 +15,9 @@ export PATH="$HOME/flutter/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# Solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
 # Volta is a hassle-free way to manage your JavaScript command-line tools.
 # https://github.com/volta-cli/volta
 export VOLTA_HOME="$HOME/.volta"
