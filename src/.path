@@ -50,3 +50,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# uv (Python)
+export PATH="$HOME/.local/bin:$PATH"
