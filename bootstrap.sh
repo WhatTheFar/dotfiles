@@ -21,4 +21,3 @@ for script in $scripts; do
 	echo -e "$GREEN--- Finished executing $script ---$RESET"
 	echo
 done
-

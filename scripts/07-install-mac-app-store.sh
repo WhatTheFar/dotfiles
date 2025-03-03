@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-RESET=`tput sgr0`
-BLUE=`tput setaf 30`
+RESET=$(tput sgr0)
+BLUE=$(tput setaf 30)
 
 # install macos apps
 mas install 937984704 # Amphetamine
