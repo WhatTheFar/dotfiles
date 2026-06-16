@@ -1,6 +1,6 @@
 return {
 	{ "a", "Arc" }, -- "A" for "Arc"
-	{ "c", "Notion Calendar" }, -- "C" for "Calendar"
+	{ "c", "Claude" }, -- "C" for "Claude"
 	{ "e", "Cursor" }, -- "E" for "Editor"
 	{ "n", "Notion" }, -- "N" for "Notion"
 	{ "d", "Discord" }, -- "D" for "Discord"

@@ -123,21 +123,6 @@ source ~/.zsh-plugin
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/far/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/far/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/far/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/far/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # Rust
 . "$HOME/.cargo/env"
 
@@ -272,37 +257,37 @@ if [[ -f "${HOME}/.volta/bin/volta" ]]; then
   fi
 fi
 
-zinit ice wait lucid depth'1' \
-    atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
-    atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-    as'command' pick'bin/pyenv' src"zpyenv.zsh" compile'{zpyenv,completions/*}.zsh' nocompile'!' \
-    atload'
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
+# zinit ice wait lucid depth'1' \
+#     atclone'PYENV_ROOT="${HOME}/.pyenv" ./libexec/pyenv init - > zpyenv.zsh' \
+#     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
+#     as'command' pick'bin/pyenv' src"zpyenv.zsh" compile'{zpyenv,completions/*}.zsh' nocompile'!' \
+#     atload'
+#     eval "$(pyenv init --path)"
+#     eval "$(pyenv init -)"
 
-    # make zsh completion works no need source in zshrc. #1644
-    # https://github.com/pyenv/pyenv/pull/1644
-    _pyenv_new() {
-        local -a comples
-        if [ "${#words}" -eq 2 ]; then
-            comples=($(pyenv commands))
-        else
-            comples=($(pyenv completions ${words[2,-2]}))
-        fi
-        _describe -t comples 'comples' comples
-    }
-    compdef _pyenv_new pyenv' \
-    id-as'pyenv'
-zinit light pyenv/pyenv
+#     # make zsh completion works no need source in zshrc. #1644
+#     # https://github.com/pyenv/pyenv/pull/1644
+#     _pyenv_new() {
+#         local -a comples
+#         if [ "${#words}" -eq 2 ]; then
+#             comples=($(pyenv commands))
+#         else
+#             comples=($(pyenv completions ${words[2,-2]}))
+#         fi
+#         _describe -t comples 'comples' comples
+#     }
+#     compdef _pyenv_new pyenv' \
+#     id-as'pyenv'
+# zinit light pyenv/pyenv
 
-zinit ice wait lucid depth'1' \
-    atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
-    atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-    as'command' pick'bin/*' src"zpyenv-virtualenv.zsh" compile'*.zsh' nocompile'!' \
-    atload'
-    eval "$(pyenv init -)"' \
-    id-as'pyenv-virtualenv'
-zinit light pyenv/pyenv-virtualenv
+# zinit ice wait lucid depth'1' \
+#     atclone'PYENV_ROOT="${HOME}/.pyenv" ./bin/pyenv-virtualenv-init - > zpyenv-virtualenv.zsh' \
+#     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
+#     as'command' pick'bin/*' src"zpyenv-virtualenv.zsh" compile'*.zsh' nocompile'!' \
+#     atload'
+#     eval "$(pyenv init -)"' \
+#     id-as'pyenv-virtualenv'
+# zinit light pyenv/pyenv-virtualenv
 
 # inspired from thefuck, built-in OMZ plugin
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/thefuck
@@ -342,3 +327,9 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 ##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
 fi
 
+
+# Added by Antigravity
+export PATH="${HOME}/.antigravity/antigravity/bin:$PATH"
+
+# OpenClaw Completion
+source "${HOME}/.openclaw/completions/openclaw.zsh"

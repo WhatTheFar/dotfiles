@@ -53,3 +53,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # uv (Python)
 export PATH="$HOME/.local/bin:$PATH"
+
+# mysql-client
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
