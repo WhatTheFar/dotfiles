@@ -7,9 +7,8 @@ return {
 	{ "f", "Fork" }, -- "F" for "Fork"
 	{ "g", "Figma" }, -- "G" for "Graphic"
 	{ "m", "Spotify" }, -- "M" for "Music"
-	{ "s", "Slack" }, -- "S" for "Slack"
 	{ "t", "iTerm" }, -- "T" for "Terminal"
-	{ "w", "Logseq" }, -- "W" for "Write"
+	{ "w", "Obsidian" }, -- "W" for "Write"
 
 	{ "b", "Basecamp 3" }, -- "B" for "Basecamp"
 }
