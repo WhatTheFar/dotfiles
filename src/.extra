@@ -9,8 +9,8 @@ alias thinc="cd ~/Projects/thinc"
 alias cleverse="cd ~/Projects/cleverse"
 alias softnetics="cd ~/Projects/softnetics"
 
-alias sntwiki="cd ~/Documents/Claude/Projects/Softnetics"
-alias softneticswiki="cd ~/Documents/Claude/Projects/Softnetics"
+alias sntos="cd ~/Documents/Claude/Projects/Softnetics"
+alias far-workspace="cd ~/Projects/softnetics/far-workspace"
 alias claudeprojects="cd ~/Documents/Claude/Projects"
 alias ppangchn="cd ~/Documents/Claude/Projects/Pang Content"
 
